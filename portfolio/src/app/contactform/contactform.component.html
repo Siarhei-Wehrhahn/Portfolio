@@ -7,9 +7,9 @@
       <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
   
       <label for="message">Subject</label>
-      <textarea [(ngModel)]="contactData.message" name="message" id="message" placeholder="Write Something.." required></textarea>
+      <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Write Something.." required></textarea>
 
-      @if(!message.valid && message.touched && !message.disabled) {
+      @if(!message.valid && message.touched) {
         <span>Please enter a message</span>
       }
   
