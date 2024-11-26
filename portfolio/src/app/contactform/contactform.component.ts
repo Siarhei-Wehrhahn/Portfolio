@@ -12,7 +12,8 @@ export class ContactformComponent {
   contactData = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    terms: false
   }
 
   onSubmit(ngForm: NgForm) {

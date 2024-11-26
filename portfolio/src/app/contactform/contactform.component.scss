@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../../assets/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+div {
+    background-color: #141D2F;
+    >form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.inputField {
+    width: 40%;
+    border: 1px solid #9747FF;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    background-color: transparent;
+}
+
+.inputField::placeholder {
+    color: white;
+    font-family: 'Fredoka';
+}
+
+.term {
+    font-family: 'Fredoka';
+    font-size: 14px;
+    color: white;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #9747FF;
+}
+
+.submitBtn {
+    width: 220px;
+    background-color: #B6B6B6;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 23px;
+}
