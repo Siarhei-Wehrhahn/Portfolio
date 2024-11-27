@@ -1,0 +1,35 @@
+font-face {
+    font-family: 'Quantico';
+    src: url('../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
+}
+
+header {
+    width: 220px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #B5E93B;
+    >div {
+    height: 74vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 13vh;
+    }
+}
+
+.rotate {
+    transform: rotate(-90deg)!important;
+    text-decoration: none;
+    font-family: 'Quantico';
+    font-size: 44px;
+    color: black;
+}
