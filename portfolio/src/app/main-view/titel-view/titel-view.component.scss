@@ -22,7 +22,6 @@ main {
             top: 20px;
             right: 100px;
             fill: black;
-            background-image: url('../../../assets/icons/email_button.svg');
         }
         >div {    
             display: flex;
@@ -53,6 +52,32 @@ main {
                 text-stroke: 1px #B5E93B;
             }
         }
+    }
+}
+
+.profileImg {
+    height: 98.7vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../../assets/img/profil_bild.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+
+    >h1 {
+        font-family: 'Quantico';
+        font-size: 100px;
+    }
+
+    >h2 {
+        font-family: 'Quantico';
+        font-size: 55px;
+        text-align: end;
+        color: transparent;
+        -webkit-text-stroke: 1px #B5E93B;
+        text-stroke: 1px #B5E93B;
     }
 }
 

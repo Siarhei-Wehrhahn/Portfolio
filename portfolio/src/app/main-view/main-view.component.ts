@@ -17,21 +17,20 @@ export class MainViewComponent implements AfterViewInit {
   }
 
   @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent): void {
+  onScroll(event: WheelEvent): any {
     if (this.scrollingHorizontally) {
-      // Horizontal scrollen basierend auf der Mausradbewegung
+      
       this.mainViewContainer.scrollBy({
-        left: event.deltaY < 0 ? -70 : 70, // Bewegt den Container je nach Scrollrichtung
+        left: event.deltaY < 0 ? -70 : 70, 
       });
-      event.preventDefault(); // Verhindert vertikales Scrollen
+      event.preventDefault();
 
-      // Überprüfen, ob das Ende des Containers erreicht wurde
       if (this.mainViewContainer.scrollLeft >= this.mainViewContainer.scrollWidth - this.mainViewContainer.clientWidth) {
         this.scrollingHorizontally = false;
-        this.mainViewContainer.style.overflowY = 'auto'; // Ermöglicht vertikales Scrollen, wenn das Ende erreicht ist
+        this.mainViewContainer.style.overflowY = 'auto';
       }
     } else {
-      return true; // Wenn horizontal gescrollt wird, normales vertikales Scrollen zulassen
+      return true;
     }
   }
 }
