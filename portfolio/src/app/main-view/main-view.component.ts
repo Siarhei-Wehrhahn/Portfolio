@@ -10,7 +10,6 @@ import { TitelViewComponent } from "./titel-view/titel-view.component";
 })
 export class MainViewComponent implements AfterViewInit {
   private mainViewContainer!: HTMLElement;
-  private scrollingHorizontally: boolean = true;
 
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
