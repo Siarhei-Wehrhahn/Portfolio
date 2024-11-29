@@ -3,11 +3,12 @@ import { TitelViewComponent } from "./titel-view/titel-view.component";
 import { WhyMeComponent } from "./why-me/why-me.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { MyWorkComponent } from "./my-work/my-work.component";
+import { ContactformComponent } from "./contactform/contactform.component";
 
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent],
+  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent],
   templateUrl: './main-view.component.html',
   styleUrl: './main-view.component.scss'
 })
