@@ -1,0 +1,81 @@
+font-face {
+    font-family: 'Quantico';
+    src: url('../../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
+}
+
+main {
+    width: 100vw;
+    height: 70vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.header {
+    margin-top: 90px;
+    font-family: 'Quantico', sans-serif;
+    font-size: 65px;
+    color: transparent;
+    transform: rotate(-90deg);
+    -webkit-text-stroke: 1px #B5E93B;
+    text-stroke: 1px #B5E93B;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.whyMeText {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.whyMePTag {
+    width: 65vw;
+    font-size: 18px;
+    line-height: 30px;
+    text-wrap: wrap;
+    font-family: 'Quantico', sans-serif;
+}
+
+.fact {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Quantico', sans-serif;
+    gap: 16px;
+}
+.factDiv {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.iAm {
+    width: 100px;
+    text-align: start;
+    font-size: 40px;
+    color: #B5E93B;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.arrowDiv {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 85vh;
+}

@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { TitelViewComponent } from "./titel-view/titel-view.component";
+import { WhyMeComponent } from "./why-me/why-me.component";
 
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [TitelViewComponent],
+  imports: [TitelViewComponent, WhyMeComponent],
   templateUrl: './main-view.component.html',
   styleUrl: './main-view.component.scss'
 })

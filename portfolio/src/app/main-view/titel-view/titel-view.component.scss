@@ -5,22 +5,25 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-        >.languageSwitch {  
-            margin-top: 50px; 
-            width: 90vw;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            flex-direction: row;
-            color: white;
-        }
-        >div {    
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 16px;
-        }
+
+    >.languageSwitch {
+        margin-top: 50px;
+        width: 90vw;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+        color: white;
+    }
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+    }
+
     >section {
         width: 100%;
         display: flex;
@@ -28,11 +31,13 @@ main {
         align-items: center;
         flex-direction: row;
         color: #B5E93B;
+
         >div {
-            >h1{
+            >h1 {
                 font-family: 'Quantico';
                 font-size: 100px;
             }
+
             >h2 {
                 font-family: 'Quantico';
                 font-size: 55px;
@@ -46,7 +51,7 @@ main {
 }
 
 .profileImg {
-    margin-left: 130px;
+    margin-left: 333px;
     height: 93.5vh;
     display: flex;
     justify-content: end;
@@ -55,11 +60,13 @@ main {
     background-image: url('../../../assets/img/profil_bild.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: auto;
+    background-size: cover;
 
     >h1 {
         font-family: 'Quantico';
         font-size: 100px;
+        color: #B5E93B;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     >h2 {
@@ -68,22 +75,29 @@ main {
         text-align: end;
         color: transparent;
         -webkit-text-stroke: 1px #B5E93B;
-        text-stroke: 1px #B5E93B;
+        -webkit-text-stroke: 1px #B5E93B;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        margin-bottom: 50%;
     }
+
 }
 
 svg {
     display: inline-block;
     visibility: visible;
-    z-index: 1; /* Falls nötig */
-    fill: black; /* Sichtbare Farbe */
+    z-index: 1;
+    fill: black;
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     position: relative;
-    top: -30vh;
-    right: -20vw
-  }
+    top: -15vh;
+    right: -12vw;
+}
+
+.pointer {
+    cursor: pointer;
+}
