@@ -1,0 +1,25 @@
+<main>
+    <div class="empty"></div>
+    <div class="down">
+      <h1>My Skill Set</h1>
+      <div class="skills">
+        <p>
+          The IT world is constantly changing, and I really enjoy expanding my knowledge. I'm especially interested in
+          new technologies and tools because I love working on my skills and always learning something new. For me, it's
+          important not only to keep up with trends but also to grow through hands-on experience and find new solutions
+          to the challenges that come my way.
+        </p>
+        <div class="skillIcon">
+          <!-- Angular Schleife -->
+          <div *ngFor="let skill of skillIcon" class="skill">
+            <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" />
+            <span [innerHTML]="skill.name"></span> <!-- Interpretiert HTML-Tags wie <br> -->
+          </div>
+        </div>
+      </div>
+      <div class="arrowDiv">
+        <img src="../../../assets/svg-icons/arrow.svg" alt="arrow">
+      </div>
+    </div>
+  </main>
+  
