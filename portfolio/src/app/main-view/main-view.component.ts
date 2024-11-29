@@ -14,23 +14,18 @@ export class MainViewComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
-  }
+    this.mainViewContainer.style.overflowY = 'hidden';
+  }  
 
   @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent): any {
-    if (this.scrollingHorizontally) {
-      
-      this.mainViewContainer.scrollBy({
-        left: event.deltaY < 0 ? -70 : 70, 
-      });
-      event.preventDefault();
-
-      if (this.mainViewContainer.scrollLeft >= this.mainViewContainer.scrollWidth - this.mainViewContainer.clientWidth) {
-        this.scrollingHorizontally = false;
-        this.mainViewContainer.style.overflowY = 'auto';
-      }
-    } else {
-      return true;
-    }
+  onScroll(event: WheelEvent): void {
+    const scrollSpeed = 150;
+  this.mainViewContainer.scrollBy({
+    left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed
+  });
+  
+    event.preventDefault();
   }
+  
+
 }
