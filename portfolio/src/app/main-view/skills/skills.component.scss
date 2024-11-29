@@ -64,7 +64,7 @@ main {
             > p {
                 font-size: 18px;
                 width: 70vw;
-                max-width: calc(7 * 70px + 6 * 70px);
+                max-width: calc(7 * 70px + 6 * 80px);
                 text-wrap: wrap;
                 color: white;
                 text-align: center;
@@ -79,4 +79,8 @@ main {
     display: flex;
     justify-content: end;
     align-items: start;
+    >img {
+        position: relative;
+        right: -100px;
+    }
 }

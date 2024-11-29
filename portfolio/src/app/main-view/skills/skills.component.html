@@ -10,10 +10,9 @@
           to the challenges that come my way.
         </p>
         <div class="skillIcon">
-          <!-- Angular Schleife -->
           <div *ngFor="let skill of skillIcon" class="skill">
             <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" />
-            <span [innerHTML]="skill.name"></span> <!-- Interpretiert HTML-Tags wie <br> -->
+            <span [innerHTML]="skill.name"></span>
           </div>
         </div>
       </div>
