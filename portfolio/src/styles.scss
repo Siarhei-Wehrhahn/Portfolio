@@ -8,13 +8,6 @@ body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(
-        to right,
-        #000000 9%,       /* Start in Schwarz */
-        #2C2B2B 22%,      /* Der erste Verlauf bis 48% */
-        #0B0A0A 38%,      /* Der sanfte Übergang zu #2C2B2B */
-        #323232 63%,      /* Der Verlauf bleibt für einen sanften Übergang */
-        #0B0A0A 75%
-    );
+    overflow: hidden;
     background-repeat: no-repeat; /* Keine Wiederholung des Hintergrunds */
 }

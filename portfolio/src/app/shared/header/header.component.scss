@@ -1,6 +1,6 @@
 font-face {
     font-family: 'Quantico';
-    src: url('../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
+    src: url('../../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
 }
 
 header {
@@ -16,18 +16,20 @@ header {
     top: 0;
     left: 0;
     background-color: #B5E93B;
+    z-index: 1000;
+
     >div {
-    height: 74vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    gap: 13vh;
+        height: 74vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        gap: 13vh;
     }
 }
 
 .rotate {
-    transform: rotate(-90deg)!important;
+    transform: rotate(-90deg) !important;
     text-decoration: none;
     font-family: 'Quantico';
     font-size: 44px;

@@ -1,49 +1,41 @@
 main {
     display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 25px;
-    >div {
+
+    >.languageSwitch {
+        margin-top: 50px;
+        width: 90vw;
         display: flex;
         justify-content: end;
-        align-items: start;
+        align-items: center;
         flex-direction: row;
-        >div {    
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            position: absolute;
-            top: 20px;
-            right: 100px;
-            fill: black;
-            background-image: url('../../../assets/icons/email_button.svg');
-        }
-        >div {    
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 16px;
-        }
+        color: white;
     }
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+    }
+
     >section {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         color: #B5E93B;
+
         >div {
-            background-image: url('../../../assets/img/profil_bild.png');
-            >h1{
+            >h1 {
                 font-family: 'Quantico';
                 font-size: 100px;
             }
+
             >h2 {
                 font-family: 'Quantico';
                 font-size: 55px;
@@ -56,14 +48,51 @@ main {
     }
 }
 
+.profileImg {
+    margin-left: 333px;
+    height: 93.5vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../../assets/img/profil_bild.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    >h1 {
+        font-family: 'Quantico';
+        font-size: 100px;
+        color: #B5E93B;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    >h2 {
+        font-family: 'Quantico';
+        font-size: 55px;
+        text-align: end;
+        color: transparent;
+        -webkit-text-stroke: 1px #B5E93B;
+        -webkit-text-stroke: 1px #B5E93B;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        margin-bottom: 50%;
+    }
+
+}
+
 svg {
     display: inline-block;
     visibility: visible;
-    z-index: 1; /* Falls nötig */
-    fill: black; /* Sichtbare Farbe */
+    fill: black;
     width: 30px;
     height: 30px;
-    flex-shrink: 0;
-  }
-  
-  
+}
+
+.arrow {
+    position: relative;
+    top: -15vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
