@@ -6,13 +6,12 @@
   width: 100vw;
   height: 100vh;
   white-space: nowrap;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .main-view-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
 }
-
 
 .content {
   display: flex;
