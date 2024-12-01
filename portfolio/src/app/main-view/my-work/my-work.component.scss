@@ -1,15 +1,15 @@
 main {
     display: flex;
-    justify-content: start; /* Kasten und Header nebeneinander */
-    align-items: flex-start; /* Header und Projekt auf gleicher Höhe */
+    justify-content: start;
+    align-items: flex-start;
     flex-direction: row;
     gap: 20px;
 
     > .header {
-        height: auto; /* Höhe an den Inhalt anpassen */
+        height: auto;
         display: flex;
         justify-content: start;
-        align-items: center; /* "My Work" auf gleicher Höhe wie Kasten */
+        align-items: center;
 
         > h1 {
             font-family: 'Quantico', sans-serif;
@@ -22,14 +22,14 @@ main {
     }
 
     > .project {
-        width: 60vw; /* Schmaler Kasten */
-        height: auto;
+        width: 60vw;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         background-color: #424d2a;
         padding: 20px;
         gap: 20px;
-        border-radius: 15px; /* Abgerundete Ecken */
+        border-radius: 15px;
 
         > .projectHeader {
             width: 100%;
@@ -39,8 +39,10 @@ main {
             gap: 10px;
 
             > h2:first-child {
-                font-size: 40px;
-                color: #B5E93B;
+                font-family: 'Quantico', sans-serif;
+                font-size: 100px;
+                color: transparent;
+                -webkit-text-stroke: 1px #B5E93B;
             }
 
             > h2:last-child {
@@ -148,20 +150,26 @@ main {
                 max-width: 100%;
 
                 > h2 {
-                    font-size: 18px;
+                    font-size: 30px;
                     color: white;
                 }
 
                 > p {
-                    font-size: 16px;
+                    font-size: 20px;
                     color: white;
                     line-height: 1.5;
                     word-wrap: break-word;
                     overflow-wrap: break-word;
-                    max-width: 95%; /* Text umbrechen */
+                    max-width: 50%;
                     text-align: justify;
                 }
             }
         }
     }
+}
+
+.teaxtHeader {
+    font-size: 24px;
+    color:  white;
+    text-align: start;
 }
