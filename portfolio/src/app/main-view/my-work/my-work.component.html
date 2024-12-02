@@ -1,66 +1,74 @@
 <main>
   <h1>My Work</h1>
-  <div class="container">
-    <div class="header">
-      <span class="number">1</span>
-      <span class="projectName">Project Join</span>
-    </div>
-    <div class="middle">
-      <div class="projectDescription">
-        <div class="about">
-          <h2>
-            <img
-              class="margin-right"
-              src="./assets/svg-icons/point.svg"
-              alt="point"
-            />
-            About the project
-          </h2>
-          <p>
-            Join is a group project inspired by the Kanban system. It is an
-            organizational app that allows users to create to-dos, assign them
-            to specific users, and move tasks through different stages of
-            progress. Once a task is completed, it can be marked as done. The
-            app also features a contact list and the option to add and check off
-            subtasks.
-          </p>
+  <div id="scrollable-container" class="scrollable">
+    <div class="container" *ngFor="let project of myProjects">
+      <div class="header">
+        <span class="number">{{ project.number }}</span>
+        <span class="projectName">Project Join</span>
+      </div>
+      <div class="middle">
+        <div class="projectDescription">
+          <div class="about">
+            <h2>
+              <img
+                class="margin-right"
+                src="./assets/svg-icons/point.svg"
+                alt="point"
+              />
+              About the project
+            </h2>
+            <p>
+              Join is a group project inspired by the Kanban system. It is an
+              organizational app that allows users to create to-dos, assign them
+              to specific users, and move tasks through different stages of
+              progress. Once a task is completed, it can be marked as done. The
+              app also features a contact list and the option to add and check
+              off subtasks.
+            </p>
+          </div>
+          <div class="technologies">
+            <h2>
+              <img
+                class="margin-right"
+                src="./assets/svg-icons/point.svg"
+                alt="point"
+              />
+              About the project
+            </h2>
+            <p>HTML, CSS, JavaScript, Firebase</p>
+          </div>
         </div>
-        <div class="technologies">
-          <h2>
-            <img
-              class="margin-right"
-              src="./assets/svg-icons/point.svg"
-              alt="point"
-            />
-            About the project
-          </h2>
-          <p>HTML, CSS, JavaScript, Firebase</p>
+        <div class="projectImg">
+          <img src="./assets/img/join.png" alt="join_project_img" />
+          <div class="link">
+            <a
+              class="github"
+              href="https://github.com/Siarhei-Wehrhahn/JOIN"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a class="test" href="">Live Test</a>
+          </div>
         </div>
       </div>
-      <div class="projectImg">
-        <img src="./assets/img/join.png" alt="join_project_img" />
-        <div class="link">
-          <a class="github" href="https://github.com/Siarhei-Wehrhahn/JOIN" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="test" href="">Live Test</a>
-        </div>
+      <div class="whatILearned">
+        <h2>
+          <img
+            class="margin-right"
+            src="./assets/svg-icons/point.svg"
+            alt="point"
+          />
+          About the project
+        </h2>
+        <p>
+          Join is a group project inspired by the Kanban system. It is an
+          organizational app that allows users to create to-dos, assign them to
+          specific users, and move tasks through different stages of progress.
+          Once a task is completed, it can be marked as done. The app also
+          features a contact list and the option to add and check off subtasks.
+        </p>
       </div>
-    </div>
-    <div class="whatILearned">
-      <h2>
-        <img
-          class="margin-right"
-          src="./assets/svg-icons/point.svg"
-          alt="point"
-        />
-        About the project
-      </h2>
-      <p>
-        Join is a group project inspired by the Kanban system. It is an
-        organizational app that allows users to create to-dos, assign them to
-        specific users, and move tasks through different stages of progress.
-        Once a task is completed, it can be marked as done. The app also
-        features a contact list and the option to add and check off subtasks.
-      </p>
     </div>
   </div>
 </main>

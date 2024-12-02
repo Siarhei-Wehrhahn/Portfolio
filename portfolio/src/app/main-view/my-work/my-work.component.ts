@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,7 +15,27 @@ import { CommonModule } from '@angular/common';
     './my-work-what-i-learned.component.scss'
   ]
 })
-export class MyWorkComponent {
+export class MyWorkComponent implements AfterViewInit {
+  private scrollableContainer!: HTMLElement;
+
+  ngAfterViewInit(): void {
+    this.scrollableContainer = document.getElementById('scrollable-container') as HTMLElement;
+    this.scrollableContainer.style.overflowY = 'hidden';
+  }
+
+  @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent): void {
+    const isWithinScrollable = this.scrollableContainer.contains(event.target as Node);
+    if (isWithinScrollable) {
+      const scrollSpeed = 100;
+      this.scrollableContainer.scrollBy({
+        left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed,
+      });
+      event.preventDefault();
+    }
+  }
+
+
   aboutJoin = 'Join is a group project inspired by the Kanban system. It is an organizational app that allows users to create to-dos, assign them to specific users, and move tasks through different stages of progress. Once a task is completed, it can be marked as done. The app also features a contact list and the option to add and check off subtasks.'
   learnedJoin = 'Lessons Learned from the "Join" Project During this project, I learned that successful teamwork heavily relies on effective communication. It is crucial for the entire team to discuss every detail together and agree on a clear course of action. I was fortunate to work with a team where collaboration was excellent. Everyone was dedicated, transparent, and acted based on our shared agreements. This project taught me the importance of integrating clear communication and teamwork into the execution of a complex project.'
   aboutPolloLoco = 'Pollo Loco is a thrilling jump-and-run game where players help Pepe face off against small and large chickens. Pepe can defeat his feathered foes by either jumping on them or throwing bottles. To use bottles, however, Pepe must first collect them, just like he collects coins scattered throughout the game. When it comes to the final boss chicken, Pepes only chance of victory is by using the collected bottles. The game is built with an object-oriented approach, ensuring dynamic interactions and an engaging gameplay experience.'
