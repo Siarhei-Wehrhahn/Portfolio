@@ -4,7 +4,7 @@
     <div class="container" *ngFor="let project of myProjects">
       <div class="header">
         <span class="number">{{ project.number }}</span>
-        <span class="projectName">Project Join</span>
+        <span class="projectName">{{project.projectName}}</span>
       </div>
       <div class="middle">
         <div class="projectDescription">
@@ -17,14 +17,7 @@
               />
               About the project
             </h2>
-            <p>
-              Join is a group project inspired by the Kanban system. It is an
-              organizational app that allows users to create to-dos, assign them
-              to specific users, and move tasks through different stages of
-              progress. Once a task is completed, it can be marked as done. The
-              app also features a contact list and the option to add and check
-              off subtasks.
-            </p>
+            <p>{{project.about}}</p>
           </div>
           <div class="technologies">
             <h2>
@@ -33,9 +26,9 @@
                 src="./assets/svg-icons/point.svg"
                 alt="point"
               />
-              About the project
+              Technologies I have used
             </h2>
-            <p>HTML, CSS, JavaScript, Firebase</p>
+            <p>{{project.technologies}}</p>
           </div>
         </div>
         <div class="projectImg">
@@ -43,7 +36,7 @@
           <div class="link">
             <a
               class="github"
-              href="https://github.com/Siarhei-Wehrhahn/JOIN"
+              href="{{project.githubLink}}"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub</a
@@ -59,15 +52,9 @@
             src="./assets/svg-icons/point.svg"
             alt="point"
           />
-          About the project
+          What I have learned
         </h2>
-        <p>
-          Join is a group project inspired by the Kanban system. It is an
-          organizational app that allows users to create to-dos, assign them to
-          specific users, and move tasks through different stages of progress.
-          Once a task is completed, it can be marked as done. The app also
-          features a contact list and the option to add and check off subtasks.
-        </p>
+        <p>{{project.learned}}</p>
       </div>
     </div>
   </div>
