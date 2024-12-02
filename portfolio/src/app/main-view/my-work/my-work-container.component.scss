@@ -1,0 +1,35 @@
+.container {
+  width: 70vw;
+  height: 45vh;
+  background-color: rgba(181, 233, 59, 0.2);
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  color: white;
+
+  > .header {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 100px;
+
+    > .number {
+      font-size: 100px;
+      font-family: "Quantico", sans-serif;
+      color: transparent;
+      -webkit-text-stroke: 1px #b5e93b;
+      font-weight: bold;
+    }
+
+    > .projectName {
+      font-size: 54px;
+      font-family: "Quantico", sans-serif;
+      color: #b5e93b;
+    }
+  }
+}

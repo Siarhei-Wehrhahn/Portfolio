@@ -11,103 +11,43 @@ main {
     transform: rotate(-90deg);
     -webkit-text-stroke: 1px #b5e93b;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 375px;
   }
+}
 
-  > .container {
-    width: 70vw;
-    height: 60vh;
-    background-color: rgba(181, 233, 59, 0.2);
-    position: relative;
+.margin-right {
+  padding-right: 20px;
+}
+
+.middle {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  > .projectDescription {
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     flex-direction: column;
-    border-radius: 25px;
-    color: white;
-
-    > .header {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      flex-direction: row;
-     margin-left: 20px;
-
-      > .number {
-        font-size: 100px;
-        font-family: "Quantico", sans-serif;
-        color: transparent;
-        -webkit-text-stroke: 1px #b5e93b;
-        font-weight: bold;
-      }
-
-      > .projectName {
-        font-size: 54px;
-        font-family: "Quantico", sans-serif;
-        color: #b5e93b;
-      }
-    }
-
-    > .middle {
-      width: 100%;
-      height: 50%;
+    gap: 30px;
+    > div {
       display: flex;
       justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      > .projectDescription {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        > div {
-          display: flex;
-          justify-content: center;
-          align-items: start;
-          flex-direction: column;
-          > p {
-            max-width: 100%;
-            word-wrap: break-word;
-            word-break: break-all;
-          }
-        }
+      align-items: start;
+      flex-direction: column;
+      > img {
+        margin-right: 50px;
       }
-      > .projectImg {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 16px;
-
-        > .link {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: row;
-          gap: 16px;
-          > img {
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-          }
-          > a {
-            text-decoration: none;
-            border-radius: 15px;
-            padding: 4px;
-            padding-inline: 16px;
-          }
-          > .github {
-            color: #b5e93b;
-            border: 1px solid #b5e93b;
-          }
-          > .test {
-            color: #252525;
-            background-color: #b5e93b;
-          }
-        }
+      > p {
+        max-width: 100%;
+        word-wrap: break-word;
+        white-space: pre-line;
+        margin-left: 37px;
+        margin-top: 20px;
       }
     }
   }
