@@ -1,0 +1,58 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 24px;
+  > .leftSide {
+    height: 60vh;
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    > .header {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: row;
+      gap: 24px;
+      > .number {
+        font-size: 48px;
+        color: transparent;
+        -webkit-text-stroke: 1px #b5e93b;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      > .headerText {
+        font-size: 30px;
+        color: #b5e93b;
+      }
+    }
+    > .projectInfo {
+      color: white;
+      line-height: 24px;
+    }
+    > button {
+      width: 120px;
+      background-color: #b5e93b;
+      border-radius: 15px;
+      color: #252525;
+      padding: 10px;
+      margin-top: 24px;
+      cursor: pointer100;
+    }
+  }
+  > .rightSide {
+    height: 100vh;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+}
+
+p {
+  word-wrap: break-word;
+  white-space: pre-line;
+}

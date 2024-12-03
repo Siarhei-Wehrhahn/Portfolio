@@ -1,0 +1,13 @@
+<main>
+    <h2>References</h2>
+    <div *ngFor="let obj of references" class="references">
+        <div class="referenceBox">
+            <p>{{obj.reference}}</p>
+        </div>
+        <div class="line"></div>
+        <div class="person">
+            <h3>{{obj.name}}</h3>
+            <p>{{obj.project}}</p>
+        </div>
+    </div>
+</main>

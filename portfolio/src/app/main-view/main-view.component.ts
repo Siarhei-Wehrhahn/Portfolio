@@ -4,11 +4,13 @@ import { WhyMeComponent } from "./why-me/why-me.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { MyWorkComponent } from "./my-work/my-work.component";
 import { ContactformComponent } from "./contactform/contactform.component";
+import { OngoingProjectComponent } from "./ongoing-project/ongoing-project.component";
+import { ReferencesComponent } from "./references/references.component";
 
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent],
+  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent, OngoingProjectComponent, ReferencesComponent],
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.scss']
 })
