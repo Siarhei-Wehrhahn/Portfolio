@@ -10,7 +10,7 @@ import { ContactformComponent } from "./contactform/contactform.component";
   standalone: true,
   imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent],
   templateUrl: './main-view.component.html',
-  styleUrl: './main-view.component.scss'
+  styleUrls: ['./main-view.component.scss']
 })
 export class MainViewComponent implements AfterViewInit {
   private mainViewContainer!: HTMLElement;
@@ -18,17 +18,16 @@ export class MainViewComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
     this.mainViewContainer.style.overflowY = 'hidden';
-  }  
+  }
 
   @HostListener('wheel', ['$event'])
   onScroll(event: WheelEvent): void {
-    const scrollSpeed = 150;
-  this.mainViewContainer.scrollBy({
-    left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed
-  });
-  
-    event.preventDefault();
+    if (this.mainViewContainer.contains(event.target as Node)) {
+      const scrollSpeed = 150;
+      this.mainViewContainer.scrollBy({
+        left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed
+      });
+      event.preventDefault();
+    }
   }
-  
-
 }

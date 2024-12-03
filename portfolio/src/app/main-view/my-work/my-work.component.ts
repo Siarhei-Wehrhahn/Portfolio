@@ -24,16 +24,18 @@ export class MyWorkComponent implements AfterViewInit {
   }
 
   @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent): void {
-    const isWithinScrollable = this.scrollableContainer.contains(event.target as Node);
-    if (isWithinScrollable) {
-      const scrollSpeed = 100;
-      this.scrollableContainer.scrollBy({
-        left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed,
-      });
-      event.preventDefault();
-    }
+onScroll(event: WheelEvent): void {
+  const isWithinScrollable = this.scrollableContainer.contains(event.target as Node);
+  if (isWithinScrollable) {
+    const scrollSpeed = 500;
+    this.scrollableContainer.scrollBy({
+      left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed,
+    });
+    event.preventDefault();
+    event.stopPropagation();
   }
+}
+
 
 
   aboutJoin = 'Join is a group project inspired by the Kanban system. It is an organizational app that allows users to create to-dos, assign them to specific users, and move tasks through different stages of progress. Once a task is completed, it can be marked as done. The app also features a contact list and the option to add and check off subtasks.'
