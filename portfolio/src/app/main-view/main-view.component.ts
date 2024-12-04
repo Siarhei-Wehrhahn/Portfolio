@@ -6,11 +6,12 @@ import { MyWorkComponent } from "./my-work/my-work.component";
 import { ContactformComponent } from "./contactform/contactform.component";
 import { OngoingProjectComponent } from "./ongoing-project/ongoing-project.component";
 import { ReferencesComponent } from "./references/references.component";
+import { FooterComponent } from "../shared/footer/footer.component";
 
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent, OngoingProjectComponent, ReferencesComponent],
+  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent, OngoingProjectComponent, ReferencesComponent, FooterComponent],
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.scss']
 })

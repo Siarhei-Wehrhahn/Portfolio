@@ -109,6 +109,10 @@ section {
     align-items: center;
     flex-direction: row;
     margin-top: 40px;
+    >img {
+        height: 20px;
+        width: 40px;
+    }
     > p {
       margin-left: 12px;
     }
@@ -140,5 +144,8 @@ section {
     align-items: end;
     flex-direction: column;
     gap: 24px;
+    >a {
+        text-decoration: none;
+    }
   }
 }
