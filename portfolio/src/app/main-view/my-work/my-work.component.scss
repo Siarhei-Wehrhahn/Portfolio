@@ -86,3 +86,13 @@ main {
     }
   }
 }
+
+@media(max-width: 1160px) {
+    .container  {
+        min-width: 70vw;
+    }
+
+    .middle {
+      width: 95%;
+    }
+}
