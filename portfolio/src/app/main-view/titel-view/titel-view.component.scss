@@ -96,3 +96,9 @@ svg {
 .pointer {
     cursor: pointer;
 }
+
+@media(max-width: 1250px) {
+    .profileImg {
+        margin-left: 210px;
+    }
+}

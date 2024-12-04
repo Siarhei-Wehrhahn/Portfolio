@@ -19,12 +19,15 @@ header {
     z-index: 1000;
 
     >div {
-        height: 74vh;
+        height: 75%;
         display: flex;
         justify-content: start;
         align-items: center;
         flex-direction: column;
-        gap: 13vh;
+        gap: 17%;
+        >a {
+            min-width: 170px;
+        }
     }
 }
 
@@ -34,4 +37,14 @@ header {
     font-family: 'Quantico';
     font-size: 44px;
     color: black;
+}
+
+@media(max-width: 1250px) {
+    header {
+        width: 100px;
+    }
+    img {
+        margin-top: 16px;
+        width: 90px;
+    }
 }

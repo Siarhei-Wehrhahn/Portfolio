@@ -1,32 +1,59 @@
 <main>
-    <h1>My Work</h1>
-    <div class="container">
-        <div class="header">
-            <span class="number">1</span>
-            <span class="projectName">Project Join</span>
+  <h1>My Work</h1>
+  <div id="scrollable-container" class="scrollable">
+    <div class="container" *ngFor="let project of myProjects">
+      <div class="header">
+        <span class="number">{{ project.number }}</span>
+        <span class="projectName">{{project.projectName}}</span>
+      </div>
+      <div class="middle">
+        <div class="projectDescription">
+          <div class="about">
+            <h2>
+              <img
+                class="margin-right"
+                src="./assets/svg-icons/point.svg"
+                alt="point"
+              />
+              About the project
+            </h2>
+            <p>{{project.about}}</p>
+          </div>
+          <div class="technologies">
+            <h2>
+              <img
+                class="margin-right"
+                src="./assets/svg-icons/point.svg"
+                alt="point"/>
+              Technologies I have used
+            </h2>
+            <p>{{project.technologies}}</p>
+          </div>
         </div>
-        <div class="middle">
-            <div class="projectDescription">
-                <div class="about">
-                    <h2><img src="./assets/svg-icons/point.svg" alt="point"> About the project</h2>
-                    <p>
-                        Taskmanager inspired by the kanban 
-                        System. Create and organize task using
-                        drag and drop functions, assign users and
-                    </p>
-                </div>
-                <div class="technologies">
-                    <h2><img src="./assets/svg-icons/point.svg" alt="point"> About the project</h2>
-                    <p>HTML, CSS, JavaScript, Firebase</p>
-                </div>
-            </div>
-            <div class="projectImg">
-                <img src="./assets/img/join.png" alt="join_project_img">
-                <div class="link">
-                    <a class="github" href="">GitHub</a>
-                    <a class="test"href="">Live Test</a>
-                </div>
-            </div>
+        <div class="projectImg">
+          <img src="./assets/img/join.png" alt="join_project_img" />
+          <div class="link">
+            <a
+              class="github"
+              href="{{project.githubLink}}"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a>
+            <a class="test" href="">Live Test</a>
+          </div>
         </div>
+      </div>
+      <div class="whatILearned">
+        <h2>
+          <img
+            class="margin-right"
+            src="./assets/svg-icons/point.svg"
+            alt="point"
+          />
+          What I have learned
+        </h2>
+        <p>{{project.learned}}</p>
+      </div>
     </div>
+  </div>
 </main>

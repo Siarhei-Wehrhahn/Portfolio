@@ -1,0 +1,35 @@
+.projectImg {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 16px;
+
+  > .link {
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    > img {
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+    > a {
+      text-decoration: none;
+      border-radius: 15px;
+      padding: 4px;
+      padding-inline: 16px;
+    }
+    > .github {
+      color: #b5e93b;
+      border: 1px solid #b5e93b;
+    }
+    > .test {
+      color: #252525;
+      background-color: #b5e93b;
+    }
+  }
+}

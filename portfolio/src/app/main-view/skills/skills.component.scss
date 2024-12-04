@@ -40,6 +40,7 @@ main {
     }
 
     > .down {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -55,6 +56,7 @@ main {
         }
 
         > .skills {
+            width: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -63,7 +65,7 @@ main {
 
             > p {
                 font-size: 18px;
-                width: 70vw;
+                width: 70%;
                 max-width: calc(7 * 70px + 6 * 80px);
                 text-wrap: wrap;
                 color: white;
@@ -80,7 +82,16 @@ main {
     justify-content: end;
     align-items: start;
     >img {
-        position: relative;
-        right: -100px;
+        margin-left: 100px;
+    }
+}
+
+@media(max-width: 1250px) {
+    .skillIcon {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }

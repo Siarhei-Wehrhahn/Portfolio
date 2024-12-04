@@ -1,0 +1,70 @@
+main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: row;
+  > h2 {
+    font-family: "Quantico", sans-serif;
+    font-size: 54px;
+    color: transparent;
+    transform: rotate(-90deg);
+    -webkit-text-stroke: 1px #b5e93b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 115px;
+  }
+  > .referenceDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    > .references {
+      width: 600px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      border: 1px solid #b5e93b;
+      color: white;
+      border-radius: 30px;
+      gap: 16px;
+      padding-inline: 24px;
+      > .referenceBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        color: white;
+        > p {
+          white-space: pre-wrap;
+          text-align: center;
+        }
+      }
+      > .line {
+        width: 1px;
+        height: 80%;
+        background-color: #b5e93b;
+      }
+      > .person {
+        min-width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        > h3 {
+          color: #b5e93b;
+        }
+        > p {
+          color: #d3ed97;
+        }
+      }
+    }
+  }
+  >.arrow {
+    height: 50%;
+    margin-left: 100px;
+  }
+}

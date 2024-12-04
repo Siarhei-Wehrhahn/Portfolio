@@ -1,0 +1,17 @@
+.whatILearned {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  > img {
+    margin-right: 50px;
+  }
+  > p {
+    max-width: 100%;
+    word-wrap: break-word;
+    white-space: pre-line;
+    margin-left: 37px;
+    margin-top: 20px;
+  }
+}
