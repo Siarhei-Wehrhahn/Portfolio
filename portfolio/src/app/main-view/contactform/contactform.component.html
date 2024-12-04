@@ -1,20 +1,81 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <input class="inputField" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
-  
-      <input class="inputField" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-  
-      <textarea class="inputField" #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Write Something" required></textarea>
+  <h1>Contact me</h1>
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input
+      class="inputField"
+      [(ngModel)]="contactData.name"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your name"
+      required
+    />
 
-      <div class="checkbox-container">
-        <input type="checkbox" id="terms" name="terms" [(ngModel)]="contactData.terms">
-        <label class="term" for="terms">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined</label>
-      </div>
+    <input
+      class="inputField"
+      [(ngModel)]="contactData.email"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Your email"
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+      required
+    />
 
-      @if(!message.valid && message.touched) {
-        <span>Please enter a message</span>
-      }
-  
-      <input class="submitBtn" type="submit" value="Send message :)">
-    </form>
-  </div>
+    <textarea
+      class="inputField textArea"
+      #message="ngModel"
+      minlength="4"
+      [(ngModel)]="contactData.message"
+      name="message"
+      id="message"
+      placeholder="Write Something"
+      required
+    ></textarea>
+
+    <div class="checkbox-container">
+      <input
+        type="checkbox"
+        id="terms"
+        name="terms"
+        [(ngModel)]="contactData.terms"
+      />
+      <label class="term" for="terms"
+        >I've read the <a href="#">privacy policy</a> and agree to the
+        processing of my data as outlined</label
+      >
+    </div>
+
+    @if(!message.valid && message.touched) {
+    <span>Please enter a message</span>
+    }
+
+    <input class="submitBtn" type="submit" value="send" />
+  </form>
+  <section>
+    <h2>Let’s work together on your next project.</h2>
+    <p>
+      Whether you need to develop a new web application, optimize existing
+      systems, or create tailored mobile apps for iOS and Android – as a
+      certified Web Developer and IHK-certified Mobile Developer, I bring the
+      technical expertise and problem-solving skills needed to turn your vision
+      into success.
+    </p>
+    <div class="email">
+      <img src="./assets/svg-icons/email.svg" alt="email_icon">
+      <p>E-mail: sergei1997.sw&#64;gmail.com</p>
+    </div>
+    <div class="phone">
+      <img src="./assets/svg-icons/phone.svg" alt="phone_icon">
+      <p>Tel: 015 773 656 331</p>
+    </div>
+    <div class="backArrow">
+      <img src="./assets/svg-icons/arrow.svg" alt="arrow_icon">
+    </div>
+    <div class="links">
+      <a href="">Legal notice</a>
+      <a href="">Privacy policy</a>
+      <p>© Siarhei Wehrhahn 2024</p>
+    </div>
+  </section>
+</div>
