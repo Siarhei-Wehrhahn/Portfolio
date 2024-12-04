@@ -91,6 +91,7 @@ section {
   justify-content: center;
   align-items: end;
   flex-direction: column;
+  text-align: end;
   color: white;
   > h2 {
     text-align: end;
@@ -99,7 +100,45 @@ section {
     margin-bottom: 12px;
   }
   > p {
-    width: 40%;
+    width: 75%;
     white-space: pre-line;
+  }
+  > .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+    > p {
+      margin-left: 12px;
+    }
+  }
+  > .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    > p {
+      margin-left: 12px;
+    }
+  }
+  > .backArrow {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    height: 250px;
+    > img {
+      transform: rotate(180deg);
+    }
+  }
+  > .links {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    gap: 24px;
   }
 }
