@@ -5,7 +5,6 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  white-space: nowrap;
   scrollbar-width: none;
 }
 
@@ -16,12 +15,14 @@
 .content {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(to right,
-      #000000 9%,
-      #2C2B2B 22%,
-      #0B0A0A 38%,
-      #323232 63%,
-      #0B0A0A 75%);
+  background: linear-gradient(
+    to right,
+    #000000 9%,
+    #2c2b2b 22%,
+    #0b0a0a 38%,
+    #323232 63%,
+    #0b0a0a 75%
+  );
 }
 
 section {
@@ -30,4 +31,15 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .main-view-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }

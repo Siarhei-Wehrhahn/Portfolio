@@ -11,21 +11,37 @@ import { FooterComponent } from "../shared/footer/footer.component";
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [TitelViewComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, ContactformComponent, OngoingProjectComponent, ReferencesComponent, FooterComponent],
+  imports: [
+    TitelViewComponent,
+    WhyMeComponent,
+    SkillsComponent,
+    MyWorkComponent,
+    ContactformComponent,
+    OngoingProjectComponent,
+    ReferencesComponent,
+    FooterComponent
+  ],
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.scss']
 })
 export class MainViewComponent implements AfterViewInit {
   private mainViewContainer!: HTMLElement;
+  private isWideScreen: boolean = false;
 
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
     this.mainViewContainer.style.overflowY = 'hidden';
+    this.updateScreenWidth();
+  }
+
+  @HostListener('window:resize')
+  updateScreenWidth(): void {
+    this.isWideScreen = window.innerWidth > 1024;
   }
 
   @HostListener('wheel', ['$event'])
   onScroll(event: WheelEvent): void {
-    if (this.mainViewContainer.contains(event.target as Node)) {
+    if (this.isWideScreen && this.mainViewContainer.contains(event.target as Node)) {
       const scrollSpeed = 150;
       this.mainViewContainer.scrollBy({
         left: event.deltaY > 0 ? scrollSpeed : -scrollSpeed

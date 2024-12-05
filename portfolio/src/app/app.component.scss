@@ -6,3 +6,10 @@ main {
     align-items: center;
     flex-direction: row;
 }
+
+@media(max-width: 1024px) {
+    main {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
