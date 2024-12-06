@@ -14,7 +14,7 @@
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Standard: horizontales Layout */
   background: linear-gradient(
     to right,
     #000000 9%,
@@ -23,6 +23,8 @@
     #323232 63%,
     #0b0a0a 75%
   );
+  width: max-content; /* Inhalt bestimmt die Breite */
+  height: 100%; /* Höhe bleibt auf 100% */
 }
 
 section {
@@ -33,13 +35,34 @@ section {
   align-items: center;
 }
 
+.footer {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .content {
-    flex-direction: column;
+    flex-direction: column; /* Umschalten auf vertikales Layout */
+    background: linear-gradient(
+      to bottom,
+      #000000 9%,
+      #2c2b2b 22%,
+      #0b0a0a 38%,
+      #323232 63%,
+      #0b0a0a 75%
+    );
+    width: 100%; /* Breite auf Container begrenzen */
+    height: max-content; /* Höhe wächst mit Inhalt */
   }
 
   .main-view-container {
-    overflow-x: hidden;
     overflow-y: auto;
+  }
+
+  .main-view-container::-webkit-scrollbar {
+    display: contents;
+  }
+
+  .footer {
+    display: block;
   }
 }

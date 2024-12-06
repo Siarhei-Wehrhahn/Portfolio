@@ -30,13 +30,13 @@ export class MainViewComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
-    this.mainViewContainer.style.overflowY = 'hidden';
     this.updateScreenWidth();
   }
 
   @HostListener('window:resize')
   updateScreenWidth(): void {
     this.isWideScreen = window.innerWidth > 1024;
+    this.mainViewContainer.style.overflowY = this.isWideScreen ? 'hidden' : 'auto';
   }
 
   @HostListener('wheel', ['$event'])

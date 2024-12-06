@@ -92,8 +92,18 @@ svg {
 }
 
 @media (max-width: 1024px) {
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrowDiv {
+        display: none;
+    }
+    
     .profileImg {
-        margin-left: 110px;
+        margin-left: 0;
         flex-direction: column-reverse;
         >h1 {
             font-size: 40;
@@ -110,5 +120,13 @@ svg {
         display: flex;
         color: white;
         font-size: 28px;
+    }
+  }
+
+  @media (max-width: 685px) {
+    .profileImg {
+        margin-left: 0;
+        flex-direction: column-reverse;
+        background-size: auto;
     }
   }
