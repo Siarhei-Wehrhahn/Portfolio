@@ -1,0 +1,138 @@
+@media (max-width: 1024px) {
+    #scrollable-container {
+      display: none;
+    }
+  
+    main {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      > h1 {
+        transform: rotate(0deg);
+        margin-top: 100px;
+        margin-bottom: 30px;
+        width: 80%;
+        text-align: start;
+      }
+    }
+  
+    .scrollable2 {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #4a4a4a transparent;
+    
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: #4a4a4a;
+        border-radius: 4px;
+      }
+    
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #6a6a6a;
+      }
+    }
+    
+    .project-card2 {
+      display: flex;
+      flex-direction: column;
+      background-color: #2d3e27;
+      border-radius: 12px;
+      padding: 20px;
+      min-width: 300px;
+      max-width: 400px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      color: #d9f99d;
+      font-family: "Roboto", sans-serif;
+    
+      .card-header2 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    
+        .project-number2 {
+          font-size: 36px;
+          color: #b5e93b;
+        }
+    
+        .project-name2 {
+          font-size: 20px;
+          color: #f6f6f6;
+          font-weight: bold;
+        }
+      }
+    
+      .card-content2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        .about-section2,
+        .technologies-section2,
+        .learned-section2 {
+          h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #b5e93b;
+          }
+    
+          p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #d9f99d;
+          }
+        }
+    
+        .image-section2 {
+          img {
+            max-width: 100%;
+            border-radius: 8px;
+          }
+        }
+    
+        .links2 {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+    
+          a {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+          }
+    
+          .github-btn2 {
+            background-color: transparent;
+            border: 2px solid #d9f99d;
+            color: #d9f99d;
+    
+            &:hover {
+              background-color: #d9f99d;
+              color: #2d3e27;
+            }
+          }
+    
+          .test-btn2 {
+            background-color: #b5e93b;
+            color: #2d3e27;
+    
+            &:hover {
+              background-color: #f6f6f6;
+              color: #2d3e27;
+            }
+          }
+        }
+      }
+    }
+    
+  }
