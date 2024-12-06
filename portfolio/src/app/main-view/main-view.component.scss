@@ -14,7 +14,7 @@
 
 .content {
   display: flex;
-  flex-direction: row; /* Standard: horizontales Layout */
+  flex-direction: row;
   background: linear-gradient(
     to right,
     #000000 9%,
@@ -23,8 +23,8 @@
     #323232 63%,
     #0b0a0a 75%
   );
-  width: max-content; /* Inhalt bestimmt die Breite */
-  height: 100%; /* Höhe bleibt auf 100% */
+  width: max-content;
+  height: 100%;
 }
 
 section {
@@ -41,7 +41,7 @@ section {
 
 @media (max-width: 1024px) {
   .content {
-    flex-direction: column; /* Umschalten auf vertikales Layout */
+    flex-direction: column;
     background: linear-gradient(
       to bottom,
       #000000 9%,
@@ -50,8 +50,8 @@ section {
       #323232 63%,
       #0b0a0a 75%
     );
-    width: 100%; /* Breite auf Container begrenzen */
-    height: max-content; /* Höhe wächst mit Inhalt */
+    width: 100%;
+    height: max-content;
   }
 
   .main-view-container {
@@ -64,5 +64,23 @@ section {
 
   .footer {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 410px) {
+  .content {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .content {
+    gap: 170px;
   }
 }

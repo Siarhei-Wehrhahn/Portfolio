@@ -104,13 +104,15 @@ svg {
     
     .profileImg {
         margin-left: 0;
+        width: 120%;
         flex-direction: column-reverse;
         >h1 {
-            font-size: 40;
+            font-size: 40px;
         }
         >h2 {
             font-size: 24;
             margin-bottom: 0;
+            text-align: center;
             -webkit-text-stroke: transparent;
             color: #B5E93B;
         }
@@ -124,9 +126,39 @@ svg {
   }
 
   @media (max-width: 685px) {
+     .header {
+        margin-top: 100px;
+    }
+
     .profileImg {
         margin-left: 0;
         flex-direction: column-reverse;
         background-size: auto;
     }
   }
+
+  @media (max-width: 640px) {
+    .profileImg {
+       background-size: 900px;
+   }
+ }
+
+ @media (max-width: 550px) {
+    .profileImg {
+       background-size: 700px;
+   }
+ }
+  
+  @media (max-width: 475px) {
+    .profileImg {
+        >h1 {
+            font-size: 40x;
+        }
+    }
+ }
+
+ @media (max-width: 550px) {
+    .profileImg {
+       background-size: 580px;
+   }
+ }
