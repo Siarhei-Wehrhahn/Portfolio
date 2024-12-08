@@ -4,7 +4,7 @@
     <div class="container" *ngFor="let project of myProjects">
       <div class="header">
         <span class="number">{{ project.number }}</span>
-        <span class="projectName">{{project.projectName}}</span>
+        <span class="projectName">{{ project.projectName }}</span>
       </div>
       <div class="middle">
         <div class="projectDescription">
@@ -17,17 +17,18 @@
               />
               About the project
             </h2>
-            <p>{{project.about}}</p>
+            <p>{{ project.about }}</p>
           </div>
           <div class="technologies">
             <h2>
               <img
                 class="margin-right"
                 src="./assets/svg-icons/point.svg"
-                alt="point"/>
+                alt="point"
+              />
               Technologies I have used
             </h2>
-            <p>{{project.technologies}}</p>
+            <p>{{ project.technologies }}</p>
           </div>
         </div>
         <div class="projectImg">
@@ -35,10 +36,11 @@
           <div class="link">
             <a
               class="github"
-              href="{{project.githubLink}}"
+              href="{{ project.githubLink }}"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub</a>
+              >GitHub</a
+            >
             <a class="test" href="">Live Test</a>
           </div>
         </div>
@@ -52,7 +54,83 @@
           />
           What I have learned
         </h2>
-        <p>{{project.learned}}</p>
+        <p>{{ project.learned }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrollable-container2" class="scrollable2">
+    <div class="project-container" *ngFor="let project of myProjects">
+      <div class="project-card2">
+        <div class="card-header2">
+          <span class="project-number2">{{ project.number }}</span>
+          <span class="project-name2">{{ project.projectName }}</span>
+        </div>
+        <div class="card-content2">
+          <div class="about-section2">
+            <h2>
+              <img
+                class="margin-right"
+                src="./assets/svg-icons/point.svg"
+                alt="point"
+              />About the project
+            </h2>
+            <p>{{ project.about }}</p>
+          </div>
+          <div class="showMoreDiv" *ngIf="!project.showMore">
+            <button class="showMoreButton" (click)="showMore(project)">
+              Show me more
+            </button>
+            <img
+              src="./assets/svg-icons/more_arrow_down.svg"
+              alt="arrow_down"
+            />
+          </div>
+          <div class="invisiblePart" *ngIf="project.showMore">
+            <div class="technologies-section2">
+              <h2>
+                <img
+                  class="margin-right"
+                  src="./assets/svg-icons/point.svg"
+                  alt="point"
+                />Technologies I have used
+              </h2>
+              <p>{{ project.technologies }}</p>
+            </div>
+            <div class="learned-section2">
+              <h2>
+                <img
+                  class="margin-right"
+                  src="./assets/svg-icons/point.svg"
+                  alt="point"
+                />What I have learned
+              </h2>
+              <p>{{ project.learned }}</p>
+            </div>
+            <div class="image-section2">
+              <img src="{{ project.img }}" alt="Project Image" />
+            </div>
+            <div class="links2">
+              <a
+                class="github-btn2"
+                href="{{ project.githubLink }}"
+                target="_blank"
+                >GitHub</a
+              >
+              <a class="test-btn2" href="#">Live Test</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="showMoreDiv marginTop" *ngIf="project.showMore">
+        <button class="showMoreButton" (click)="showMore(project)">
+          Show me less
+        </button>
+        <img
+          class="rotate"
+          src="./assets/svg-icons/more_arrow_down.svg"
+          alt="arrow_down"
+        />
       </div>
     </div>
   </div>

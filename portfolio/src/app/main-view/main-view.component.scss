@@ -12,6 +12,10 @@
   display: none;
 }
 
+.ongoing {
+  width: 50%;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -54,6 +58,9 @@ section {
     height: max-content;
   }
 
+  .ongoing {
+    width: 100%;
+  }
   .main-view-container {
     overflow-y: auto;
   }
@@ -64,23 +71,5 @@ section {
 
   .footer {
     display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .content {
-    gap: 42px;
-  }
-}
-
-@media (max-width: 410px) {
-  .content {
-    gap: 100px;
-  }
-}
-
-@media (max-width: 350px) {
-  .content {
-    gap: 170px;
   }
 }
