@@ -16,8 +16,7 @@ main {
   }
 }
 
-/* Stile für scrollable-container */
-.scrollable-container {
+.scrollable {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -31,71 +30,37 @@ main {
   scrollbar-color: #4a4a4a transparent;
 }
 
-.scrollable-container::-webkit-scrollbar {
+.scrollable::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-.scrollable-container::-webkit-scrollbar-thumb {
+.scrollable::-webkit-scrollbar-thumb {
   background-color: #4a4a4a;
   border-radius: 4px;
 }
 
-.scrollable-container::-webkit-scrollbar-thumb:hover {
+.scrollable::-webkit-scrollbar-thumb:hover {
   background-color: #6a6a6a;
 }
 
-.scrollable-container::-webkit-scrollbar-track {
+.scrollable::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Stile für scrollable-container2 */
-.scrollable-container2 {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: row;
-  gap: 24px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
 
-  scrollbar-width: thin;
-  scrollbar-color: #4a4a4a transparent;
-}
-
-.scrollable-container2::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.scrollable-container2::-webkit-scrollbar-thumb {
-  background-color: #4a4a4a;
-  border-radius: 4px;
-}
-
-.scrollable-container2::-webkit-scrollbar-thumb:hover {
-  background-color: #6a6a6a;
-}
-
-.scrollable-container2::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Weitere spezifische Stile */
 .margin-right {
   padding-right: 20px;
 }
 
-.middle-container {
+.middle {
   width: 90%;
   height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
-  > .projectDescription-container {
+  > .projectDescription {
     width: 50%;
     height: 100%;
     display: flex;
@@ -103,17 +68,14 @@ main {
     align-items: start;
     flex-direction: column;
     gap: 30px;
-
     > div {
       display: flex;
       justify-content: center;
       align-items: start;
       flex-direction: column;
-
       > img {
         margin-right: 50px;
       }
-
       > p {
         max-width: 100%;
         word-wrap: break-word;
@@ -123,4 +85,14 @@ main {
       }
     }
   }
+}
+
+@media(max-width: 1160px) {
+    .container  {
+        min-width: 70vw;
+    }
+
+    .middle {
+      width: 95%;
+    }
 }

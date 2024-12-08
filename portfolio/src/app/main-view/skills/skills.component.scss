@@ -3,20 +3,21 @@
   grid-template-columns: repeat(7, 1fr);
   gap: 40px 10px;
   justify-content: center;
+  margin-bottom: 50px;
 
-  .skill {
+  >.skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    img {
+    >img {
       width: 50px;
       height: 50px;
       margin-bottom: 8px;
     }
 
-    span {
+    >span {
       font-size: 14px;
       color: white;
       line-height: 1.5;
@@ -46,6 +47,7 @@ main {
     flex-direction: row;
 
     > h1 {
+      width: 100%;
       font-family: "Quantico", sans-serif;
       font-size: 65px;
       color: transparent;
@@ -55,7 +57,7 @@ main {
     }
 
     > .skills {
-      width: 70%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -133,7 +135,7 @@ main {
 
 @media (max-width: 1250px) {
   .skillIcon {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
