@@ -16,6 +16,32 @@
   width: 30vw;
 }
 
+section {
+  width: 90vw;
+  position: relative;
+}
+
+#titelView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto; 
+  box-sizing: border-box;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -28,7 +54,6 @@
     #0b0a0a 75%
   );
   height: 100%;
-  width: 700vw;
 }
 
 section {
@@ -37,10 +62,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#contact {
-  padding-right: 23px;
 }
 
 .footer {
@@ -54,6 +75,10 @@ section {
 }
 
 @media (max-width: 1024px) {
+  #titelView {
+    width: 100%; /* Korrektur für kleinere Bildschirme */
+  }
+
   .content {
     flex-direction: column;
     background: linear-gradient(
