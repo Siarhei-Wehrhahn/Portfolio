@@ -22,7 +22,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://siarhei-wehrhahn.de/mx00.udag.de',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

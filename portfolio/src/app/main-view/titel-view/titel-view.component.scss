@@ -1,4 +1,5 @@
 main {
+    width: 86vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +7,7 @@ main {
 
     >.languageSwitch {
         margin-top: 50px;
-        width: 90vw;
+        width: 70vw;
         display: flex;
         justify-content: end;
         align-items: center;
@@ -33,8 +34,8 @@ main {
 }
 
 .profileImg {
-    margin-left: 333px;
     height: 93.5vh;
+    width: 80%;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -42,7 +43,7 @@ main {
     background-image: url('../../../assets/img/profil_bild.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    background-size: contain;
 
     >h1 {
         font-family: 'Quantico';
@@ -59,7 +60,7 @@ main {
         color: transparent;
         -webkit-text-stroke: 1px #B5E93B;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        margin-bottom: 50%;
+        margin-bottom: 25%;
     }
 
 }
@@ -72,9 +73,11 @@ svg {
     height: 30px;
 }
 
-.arrow {
-    position: relative;
-    top: -15vh;
+.arrowDiv {
+    height: 47vh;
+    display: flex;
+    justify-content: end;
+    align-items: start;
 }
 
 .pointer {
@@ -83,12 +86,6 @@ svg {
 
 .city {
     display: none;
-}
-
-@media(max-width: 1250px) {
-    .profileImg {
-        margin-left: 210px;
-    }
 }
 
 @media (max-width: 1024px) {

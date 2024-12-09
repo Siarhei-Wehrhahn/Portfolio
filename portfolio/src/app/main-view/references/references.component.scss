@@ -120,21 +120,20 @@ main {
 
     .references {
       display: flex;
-      overflow-x: scroll; /* Scroll bleibt aktiv für Punkte */
-      scroll-snap-type: x mandatory; /* Snap zur nächsten Referenz */
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
       gap: 16px;
-      width: 100%; /* Breite anpassen */
+      width: 100%;
       scroll-behavior: smooth;
     
-      /* Scrollbar vollständig verstecken */
       &::-webkit-scrollbar {
-        display: none; /* Scroll-Leiste ausblenden */
+        display: none;
       }
     }
     
     .referenceBox {
-      scroll-snap-align: start; /* Für saubere Stops */
-      flex: 0 0 100%; /* Jede Box nimmt die volle Breite */
+      scroll-snap-align: start;
+      flex: 0 0 100%;
       text-align: center;
     }
     

@@ -5,16 +5,22 @@ main {
   align-items: center;
   flex-direction: row;
 
-  > h1 {
-    width: 100%;
-    font-family: "Quantico", sans-serif;
-    font-size: 54px;
-    color: transparent;
-    transform: rotate(-90deg);
-    -webkit-text-stroke: 1px #b5e93b;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    white-space: nowrap;
-    margin-bottom: 45%;
+  > .headerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 48vh;
+    > h1 {
+      width: 100%;
+      font-family: "Quantico", sans-serif;
+      font-size: 54px;
+      color: transparent;
+      transform: rotate(-90deg);
+      -webkit-text-stroke: 1px #b5e93b;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      white-space: nowrap;
+      margin-bottom: 45%;
+    }
   }
 }
 
@@ -54,7 +60,6 @@ main {
   background: transparent;
 }
 
-
 .margin-right {
   padding-right: 20px;
 }
@@ -93,12 +98,12 @@ main {
   }
 }
 
-@media(max-width: 1160px) {
-    .container  {
-        min-width: 70vw;
-    }
+@media (max-width: 1160px) {
+  .container {
+    min-width: 70vw;
+  }
 
-    .middle {
-      width: 95%;
-    }
+  .middle {
+    width: 95%;
+  }
 }

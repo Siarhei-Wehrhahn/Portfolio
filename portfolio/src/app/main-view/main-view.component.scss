@@ -13,7 +13,7 @@
 }
 
 .ongoing {
-  width: 50%;
+  width: 30vw;
 }
 
 .content {
@@ -41,6 +41,12 @@ section {
 
 .footer {
   display: none;
+}
+
+@media(max-width: 1250px) {
+  #titelView {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 1024px) {

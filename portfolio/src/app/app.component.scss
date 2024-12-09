@@ -7,6 +7,16 @@ main {
     flex-direction: row;
 }
 
+router-outlet {
+    margin-left: 220px;
+}
+
+@media(max-width: 1250px) {
+    router-outlet {
+        margin-left: 100px;
+    }
+}
+
 @media(max-width: 1024px) {
     main {
         justify-content: center;
