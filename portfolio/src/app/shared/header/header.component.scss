@@ -1,50 +1,81 @@
 font-face {
-    font-family: 'Quantico';
-    src: url('../../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
+  font-family: "Quantico";
+  src: url("../../../assets/fonts/Quantico/Quantico-Regular.ttf")
+    format("trueType");
 }
 
 header {
-    width: 220px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 220px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #b5e93b;
+  z-index: 1000;
+
+  > div {
+    height: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #B5E93B;
-    z-index: 1000;
-
-    >div {
-        height: 75%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: column;
-        gap: 17%;
-        >a {
-            min-width: 170px;
-        }
+    gap: 17%;
+    > a {
+      min-width: 170px;
     }
+  }
 }
 
 .rotate {
-    transform: rotate(-90deg) !important;
-    text-decoration: none;
-    font-family: 'Quantico';
-    font-size: 44px;
-    color: black;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  font-family: "Quantico";
+  font-size: 44px;
+  color: black;
 }
 
-@media(max-width: 1250px) {
-    header {
-        width: 100px;
+.burgerMenu {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+  header {
+    width: 100px;
+  }
+  .logo {
+    margin-top: 16px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    right: 0;
+    > div {
+        display: none;
     }
-    img {
-        margin-top: 16px;
-        width: 90px;
-    }
+  }
+
+  .logo {
+    width: 120px;
+    margin-left: 16px;
+  }
+
+  .burgerMenu {
+      display: flex;
+      margin-right: 20px;
+  }
 }

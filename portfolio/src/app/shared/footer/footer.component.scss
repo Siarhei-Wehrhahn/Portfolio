@@ -5,3 +5,10 @@ footer {
     padding: 0;
     background-color: #B5E93B;
 }
+
+@media (max-width: 1024px) {
+  footer {
+    min-width: 100%;
+    min-height: 100px;
+  }
+}

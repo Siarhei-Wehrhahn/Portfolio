@@ -1,97 +1,152 @@
 .skillIcon {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 40px 10px;
-    justify-content: center;
-  
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 40px 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  > .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    > img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+
+    > span {
+      font-size: 14px;
+      color: white;
+      line-height: 1.5;
+      word-wrap: break-word;
       text-align: center;
-  
-      img {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 8px;
-      }
-  
-      span {
-        font-size: 14px;
-        color: white;
-        line-height: 1.5;
-        word-wrap: break-word;
-        text-align: center;
-      }
     }
   }
-  
+}
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  > .empty {
+    width: 100%;
+    height: 40vh;
+  }
+
+  > .down {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    max-width: 100vw;
+    flex-direction: row;
 
-    > .empty {
+    > .header {
+      width: 35%;
+      > h1 {
         width: 100%;
-        height: 50vh;
+        font-family: "Quantico", sans-serif;
+        font-size: 65px;
+        color: transparent;
+        transform: rotate(-90deg);
+        -webkit-text-stroke: 1px #b5e93b;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin-left: 50px;
+        white-space: nowrap;
+      }
     }
 
-    > .down {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+    > .skills {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-        > h1 {
-            font-family: 'Quantico', sans-serif;
-            font-size: 65px;
-            color: transparent;
-            transform: rotate(-90deg);
-            -webkit-text-stroke: 1px #B5E93B;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        > .skills {
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: max-content;
-
-            > p {
-                font-size: 18px;
-                width: 70%;
-                max-width: calc(7 * 70px + 6 * 80px);
-                text-wrap: wrap;
-                color: white;
-                text-align: center;
-                margin-bottom: 40px;
-            }
-        }
+      > p {
+        font-size: 18px;
+        width: 70%;
+        max-width: calc(7 * 70px + 6 * 80px);
+        text-wrap: wrap;
+        color: white;
+        text-align: center;
+        margin-bottom: 40px;
+      }
     }
+  }
 }
 
 .arrowDiv {
-    height: 70vh;
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    >img {
-        margin-left: 100px;
-    }
+  height: 73vh;
+  width: 12%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
 }
 
-@media(max-width: 1250px) {
-    .skillIcon {
-        width: 70%;
+@media (max-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .empty {
+      display: none;
+    }
+
+    .arrowDiv {
+      display: none;
+    }
+
+    > .down {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        > h1 {
+          transform: rotate(0deg);
+          margin-top: 120px;
+          margin-bottom: 24px;
+          margin-left: 0;
+          width: 100%;
+          text-align: start;
+        }
+      }
+      > .skills {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        > p {
+          width: 100%;
+          text-align: start;
+        }
+        > .skillIcon {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 1250px) {
+  .skillIcon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }

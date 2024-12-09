@@ -1,6 +1,17 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+interface Project {
+  number: number;
+  projectName: string;
+  img: string;
+  about: string;
+  technologies: string;
+  githubLink: string;
+  learned: string;
+  showMore: boolean;
+}
+
 @Component({
   selector: 'app-my-work',
   standalone: true,
@@ -12,6 +23,7 @@ import { CommonModule } from '@angular/common';
     './my-work.component.scss',
     './my-work-project-description.component.scss',
     './my-work-project-img.component.scss',
+    './my-work-media.component.scss',
     './my-work-what-i-learned.component.scss'
   ]
 })
@@ -26,6 +38,7 @@ export class MyWorkComponent implements AfterViewInit {
   @HostListener('wheel', ['$event'])
 onScroll(event: WheelEvent): void {
   const isWithinScrollable = this.scrollableContainer.contains(event.target as Node);
+
   if (isWithinScrollable) {
     const scrollSpeed = 500;
     this.scrollableContainer.scrollBy({
@@ -35,8 +48,6 @@ onScroll(event: WheelEvent): void {
     event.stopPropagation();
   }
 }
-
-
 
   aboutJoin = 'Join is a group project inspired by the Kanban system. It is an organizational app that allows users to create to-dos, assign them to specific users, and move tasks through different stages of progress. Once a task is completed, it can be marked as done. The app also features a contact list and the option to add and check off subtasks.'
   learnedJoin = 'Lessons Learned from the "Join" Project During this project, I learned that successful teamwork heavily relies on effective communication. It is crucial for the entire team to discuss every detail together and agree on a clear course of action. I was fortunate to work with a team where collaboration was excellent. Everyone was dedicated, transparent, and acted based on our shared agreements. This project taught me the importance of integrating clear communication and teamwork into the execution of a complex project.'
@@ -48,11 +59,15 @@ onScroll(event: WheelEvent): void {
   learnedJRadio = 'In this project, I learned how to quickly implement a simple radio streaming app with minimal requirements. I gained experience in integrating web radio and live streaming features while also understanding the challenges posed by Apples strict guidelines for app submissions. The process taught me the importance of considering platform-specific requirements early in development, especially for features like live streaming that need to be tested during the app review. Additionally, I learned how to adjust the project scope to effectively meet both technical and submission requirements. One highlight was the apps international success, with downloads in countries such as the USA, Germany, the Netherlands, Mainland China, and Ukraine.'
   aboutGrowBro = 'GrowBro is an app connected to the ChatGPT API, specifically trained to answer all questions about cannabis cultivation. With the decriminalization of cannabis on April 1, 2024, I saw an opportunity to create an AI assistant tailored for beginners. The app is straightforward: users can register either via email or anonymously and are immediately directed to the main screen, where all interactions take place. Here, users can ask questions, and before responding, the AI evaluates whether its answer would be helpful or potentially harmful to the plant. Based on this assessment, it provides two possible answers, along with the pros and cons of each option, ensuring users get comprehensive and detailed guidance without needing to ask follow-up questions frequently.'
   learnedGrowBro = 'I learned how to work with the ChatGPT API and understood the importance of developing software that aligns with current events. This approach can drive significant user interest, resulting in many downloads and even some sales. Additionally, the project taught me how to create value by combining relevant content with user-friendly technology, leading to a successful app launch.'
-  myProjects = [
-    {number: 1, projectName: 'Join', about: this.aboutJoin, technologies: 'HTML, CSS, JavaScript, Firebase', githubLink: 'https://github.com/Siarhei-Wehrhahn/JOIN', learned: this.learnedJoin},
-    {number: 2, projectName: 'Pollo Loco', about: this.aboutPolloLoco, technologies: 'HTML, CSS, JavaScript', githubLink: 'https://github.com/Siarhei-Wehrhahn/El_Polo_Loco', learned: this.learnedPolloLoco},
-    {number: 3, projectName: 'Clever Kiddo', about: this.aboutCleverKiddo, technologies: 'SwiftUi, Firebase, MVVM, Combine, SwiftUI State Management', githubLink: 'https://github.com/Siarhei-Wehrhahn/Clever-Kiddo-', learned: this.learnedCleverKiddo},
-    {number: 4, projectName: 'JRadio', about: this.aboutJRadio, technologies: 'SwiftUi', githubLink: 'https://github.com/Siarhei-Wehrhahn/Jay-s_Webradio', learned: this.learnedJRadio},
-    {number: 5, projectName: 'GrowBro', about: this.aboutGrowBro, technologies: 'SwiftUi, ChatGPT API, Firebase, MVVM, CoreData', githubLink: 'https://github.com/Siarhei-Wehrhahn/GrowBro', learned: this.learnedGrowBro}
+  myProjects: Project[] = [
+    {number: 1, projectName: 'Join', img: "./assets/img/join.png", about: this.aboutJoin, technologies: 'HTML, CSS, JavaScript, Firebase', githubLink: 'https://github.com/Siarhei-Wehrhahn/JOIN', learned: this.learnedJoin, showMore: true},
+    {number: 2, projectName: 'Pollo Loco', img: "./assets/img/pollo_loco.png", about: this.aboutPolloLoco, technologies: 'HTML, CSS, JavaScript', githubLink: 'https://github.com/Siarhei-Wehrhahn/El_Polo_Loco', learned: this.learnedPolloLoco, showMore: false},
+    {number: 3, projectName: 'Clever Kiddo', img: "./assets/img/join.png", about: this.aboutCleverKiddo, technologies: 'SwiftUi, Firebase, MVVM, Combine, SwiftUI State Management', githubLink: 'https://github.com/Siarhei-Wehrhahn/Clever-Kiddo-', learned: this.learnedCleverKiddo, showMore: false},
+    {number: 4, projectName: 'JRadio', img: "./assets/img/join.png", about: this.aboutJRadio, technologies: 'SwiftUi', githubLink: 'https://github.com/Siarhei-Wehrhahn/Jay-s_Webradio', learned: this.learnedJRadio, showMore: false},
+    {number: 5, projectName: 'GrowBro', img: "./assets/img/join.png", about: this.aboutGrowBro, technologies: 'SwiftUi, ChatGPT API, Firebase, MVVM, CoreData', githubLink: 'https://github.com/Siarhei-Wehrhahn/GrowBro', learned: this.learnedGrowBro, showMore: false}
   ]
+
+  showMore(project: Project) {
+    project.showMore = !project.showMore;
+  }
 }

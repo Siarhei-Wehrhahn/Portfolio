@@ -1,80 +1,168 @@
 font-face {
-    font-family: 'Quantico';
-    src: url('../../../assets/fonts/Quantico/Quantico-Regular.ttf') format('trueType');
+  font-family: "Quantico";
+  src: url("../../../assets/fonts/Quantico/Quantico-Regular.ttf")
+    format("trueType");
 }
 
 main {
-    width: 100vw;
-    height: 70vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: row;
-    margin-left: 50px;
+  width: 100vw;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  margin-left: 50px;
 }
 
 .header {
-    margin-top: 90px;
-    font-family: 'Quantico', sans-serif;
-    font-size: 65px;
-    color: transparent;
-    transform: rotate(-90deg);
-    -webkit-text-stroke: 1px #B5E93B;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 90px;
+  font-family: "Quantico", sans-serif;
+  font-size: 65px;
+  color: transparent;
+  transform: rotate(-90deg);
+  -webkit-text-stroke: 1px #b5e93b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .whyMeText {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
 }
 
 .whyMePTag {
-    width: 65vw;
-    font-size: 18px;
-    line-height: 30px;
-    text-wrap: wrap;
-    font-family: 'Quantico', sans-serif;
+  width: 65vw;
+  font-size: 18px;
+  line-height: 30px;
+  text-wrap: wrap;
+  font-family: "Quantico", sans-serif;
 }
 
 .fact {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Quantico', sans-serif;
-    gap: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Quantico", sans-serif;
+  gap: 16px;
 }
 .factDiv {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
 }
 
 .iAm {
-    width: 100px;
-    text-align: start;
-    font-size: 40px;
-    color: #B5E93B;
+  width: 100px;
+  text-align: start;
+  font-size: 40px;
+  color: #b5e93b;
 }
 
 .row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .arrowDiv {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 82vh;
+}
+
+.contactBtn {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    main {
+        margin-left: 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >.whyMeHeader {
+            width: 80%;
+            justify-content: start;
+        }
+        >.whyMeText {
+          >.center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          >.factDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >.iAm {
+              width: 80%;
+              text-align: start;
+              margin-bottom: 24px;
+            }
+            >.row {
+              width: 80%;
+            }
+          }
+        }
+    }
+
+    .whyMePTag {
+      width: 80%;
+  }
+
+    .header {
+        transform: rotate(0deg);
+        margin-bottom: 24px;
+        margin-top: 100px;
+    }
+
+    .arrowDiv {
+        display: none;
+    }
+    
+    .contactBtn {
+        display: flex;
+        text-align: center;
+        text-decoration: none;
+        background-color: #b5e93b;
+        padding: 12px;
+        margin: 24px;
+        color: #4A4A4A;
+        border-radius: 30px;
+        width: 120px;
+        justify-content: center;
+    }
+
+    img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 720px) {
+    .factDiv {
+        align-items: center;
+        gap: 32px;
+    }
+
+    .iAm {
+      width: 10%;
+      text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 32px;
+    }
 }
