@@ -108,3 +108,17 @@ main {
     width: 95%;
   }
 }
+
+@media (max-width: 1024px) {
+  main {
+    > .headerDiv {
+      width: 80%;
+      height: auto;
+      justify-content: start;
+      > h1 {
+        transform: rotate(0deg);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

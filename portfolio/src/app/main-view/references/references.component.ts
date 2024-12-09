@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -8,8 +8,30 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })
-export class ReferencesComponent {
+export class ReferencesComponent implements AfterViewInit {
   @ViewChild('references') referencesContainer!: ElementRef;
+
+  ngAfterViewInit() {
+    // Stelle sicher, dass das Element existiert
+    if (this.referencesContainer) {
+      this.referencesContainer.nativeElement.scrollLeft = 0; // Scroll auf den ersten Punkt
+    }
+  }
+
+  scrollToReference(index: number): void {
+    const referenceDiv = document.querySelector('.referenceDiv');
+    const references = referenceDiv?.querySelectorAll('.referenceBox');
+    const targetReference = references ? references[index] : null;
+  
+    if (targetReference) {
+      targetReference.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center', // Scroll to center
+      });
+    }
+  
+    this.currentReferenceIndex = index; // Update the active point
+  }  
 
   references = [
     {name: 'Sebastian Böhme', project: 'Project Kochwelt', reference: 'Während des Gruppenprojekts "Kochwelt" am Anfang des Kurses hat Siarhei immer wieder gezeigt wie hilfsbereit und zuvorkommend er ist. Durch seine fortgeschrittene Erfahrung, konnte er den Mitgliedern unserer Gruppe immer wieder wertvolle Tipps geben und hat damit beachtlich zum Erfolg des Projekts beigetragen. Auch außerhalb von Gruppenprojekten, stand er seinen Mitmenschen immer mit Rat und Tat zur Seite. Ein echter Teamplayer.'},
@@ -18,16 +40,4 @@ export class ReferencesComponent {
   ]
 
   currentReferenceIndex = 0;
-
-  scrollToReference(index: number) {
-    const container = this.referencesContainer.nativeElement;
-    const referenceWidth = container.offsetWidth;
-
-    container.scrollTo({
-      left: index * referenceWidth,
-      behavior: 'smooth',
-    });
-
-    this.currentReferenceIndex = index;
-  }
 }
