@@ -46,6 +46,7 @@ main {
     flex-direction: row;
 
     > .header {
+      width: 35%;
       > h1 {
         width: 100%;
         font-family: "Quantico", sans-serif;
@@ -82,13 +83,9 @@ main {
 .arrowDiv {
   height: 73vh;
   width: 12%;
-  margin-right: 20px;
   display: flex;
   justify-content: end;
   align-items: start;
-  > img {
-    margin-left: 100px;
-  }
 }
 
 @media (max-width: 1024px) {
