@@ -15,7 +15,6 @@ main {
 }
 
 .header {
-  margin-top: 90px;
   font-family: "Quantico", sans-serif;
   font-size: 65px;
   color: transparent;
@@ -27,6 +26,10 @@ main {
 
 .whyMeHeader {
   width: 10%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .whyMeText {
@@ -35,6 +38,7 @@ main {
   justify-content: center;
   align-items: start;
   flex-direction: column;
+  gap: 50px;
 }
 
 .whyMePTag {
@@ -56,7 +60,6 @@ main {
 }
 .factDiv {
   width: 100%;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: start;
