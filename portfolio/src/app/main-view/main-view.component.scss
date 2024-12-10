@@ -1,6 +1,5 @@
 .main-view-container {
   overflow-x: scroll;
-  overflow-y: hidden;
   scroll-behavior: auto;
   display: flex;
   width: 100vw;
@@ -17,7 +16,7 @@
 }
 
 * {
-  outline: 1px solid red; /* Zeigt alle Layoutgrenzen */
+  outline: 1px solid red;
 }
 
 .main-view-container::-webkit-scrollbar {
@@ -25,7 +24,7 @@
 }
 
 .ongoing {
-  width: 30vw;
+  width: 10%;
 }
 
 // section {

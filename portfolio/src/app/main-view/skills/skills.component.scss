@@ -46,7 +46,10 @@ main {
     flex-direction: row;
 
     > .header {
-      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10%;
       > h1 {
         width: 100%;
         font-family: "Quantico", sans-serif;
