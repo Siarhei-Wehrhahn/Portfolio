@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -22,7 +23,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://siarhei-wehrhahn.de/mx00.udag.de',
+    endPoint: 'https://siarhei-wehrhahn.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

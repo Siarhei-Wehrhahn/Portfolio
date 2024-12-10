@@ -5,14 +5,12 @@ font-face {
 }
 
 main {
-  width: 100vw;
   height: 70vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  margin-left: 50px;
 }
 
 .header {
@@ -23,6 +21,7 @@ main {
   transform: rotate(-90deg);
   -webkit-text-stroke: 1px #b5e93b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
 }
 
 .whyMeText {
