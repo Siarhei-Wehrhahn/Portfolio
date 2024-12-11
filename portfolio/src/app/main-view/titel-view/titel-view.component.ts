@@ -12,9 +12,12 @@ export class TitelViewComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const h1Element = this.el.nativeElement.querySelector('.name');
+    const h22Element = this.el.nativeElement.querySelector('.sureName');
     const h2Element = this.el.nativeElement.querySelector('.job');
 
-    this.renderer.addClass(h1Element, 'animate');
-    this.renderer.addClass(h2Element, 'animate');
+    // Set classes with delays for animations
+    setTimeout(() => this.renderer.addClass(h1Element, 'animate'), 0); // Immediate
+    setTimeout(() => this.renderer.addClass(h22Element, 'animate'), 500); // After 0.5s
+    setTimeout(() => this.renderer.addClass(h2Element, 'animate'), 1000); // After 1s
   }
 }

@@ -44,6 +44,13 @@ main {
     }
 }
 
+.name,
+.sureName,
+.job {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
 .animate {
     animation: slideInUp 1s ease-out;
     animation-fill-mode: both;
@@ -61,15 +68,21 @@ main {
     background-position: bottom;
     background-size: contain;
 
-    >h1 {
-        font-family: 'Quantico';
-        font-size: 100px;
-        color: #B5E93B;
-        text-align: center;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        animation-delay: 0.3s;
+    >.names {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 24px;
+        >h1 {
+            font-family: 'Quantico';
+            font-size: 100px;
+            color: #B5E93B;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            animation-delay: 0.3s;
+        }
     }
-
     >h2 {
         font-family: 'Quantico';
         font-size: 55px;
@@ -80,7 +93,6 @@ main {
         margin-bottom: 20%;
         animation-delay: 0.6s;
     }
-
 }
 
 svg {

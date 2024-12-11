@@ -30,6 +30,18 @@ export class MainViewComponent implements AfterViewInit {
   private mainViewContainer!: HTMLElement;
   private isWideScreen: boolean = false;
 
+  scrollToTop(): void {
+    const mainViewContainer = document.getElementById('main-view-container');
+    if (!mainViewContainer) {
+        console.error('main-view-container not found'); // Debugging
+        return;
+    }
+    mainViewContainer.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
   ngAfterViewInit(): void {
     this.mainViewContainer = document.getElementById('main-view-container') as HTMLElement;
     this.updateScreenWidth();

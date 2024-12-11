@@ -20,6 +20,7 @@ main {
   font-family: "Quantico", sans-serif;
   font-size: 65px;
   color: transparent;
+  white-space: nowrap;
   transform: rotate(-90deg);
   -webkit-text-stroke: 1px #b5e93b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -40,15 +41,54 @@ main {
   font-family: "Quantico", sans-serif;
 }
 
-.fact {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Quantico", sans-serif;
-  gap: 16px;
+.locationImg, .remoteImg, .bagImg {
+  background-size: contain;
+  background-position: center;
+  transition: background-image 0.3s ease;
 }
+
+.locationImg:hover {
+  background-image: url("../../../assets/svg-icons/location2.svg");
+  background-repeat: no-repeat;
+  height: 97px;
+  width: 180px;
+}
+
+.remoteImg:hover {
+  background-image: url("../../../assets/svg-icons/remote_hover.svg");
+  background-repeat: no-repeat;
+  height: 86px;
+  width: 180px;
+}
+
+.bagImg:hover {
+  background-image: url("../../../assets/svg-icons/bag_hover.svg");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 155px;
+}
+
+.locationImg {
+  background-image: url("../../../assets/svg-icons/location1.svg");
+  background-repeat: no-repeat;
+  height: 97px;
+  width: 180px;
+}
+
+.remoteImg {
+  background-image: url("../../../assets/svg-icons/remote.svg");
+  background-repeat: no-repeat;
+  height: 86px;
+  width: 180px;
+}
+
+.bagImg {
+  background-image: url("../../../assets/svg-icons/bag.svg");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 155px;
+}
+
 .factDiv {
   width: 100%;
   margin-top: 50px;
@@ -67,10 +107,14 @@ main {
 
 .row {
   width: 100%;
+  height: 120px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   flex-direction: row;
+  gap: 100px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .arrowDiv {
