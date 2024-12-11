@@ -7,6 +7,7 @@ import { ContactformComponent } from "./contactform/contactform.component";
 import { OngoingProjectComponent } from "./ongoing-project/ongoing-project.component";
 import { ReferencesComponent } from "./references/references.component";
 import { FooterComponent } from "../shared/footer/footer.component";
+import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
   selector: 'app-main-view',
@@ -19,8 +20,9 @@ import { FooterComponent } from "../shared/footer/footer.component";
     ContactformComponent,
     OngoingProjectComponent,
     ReferencesComponent,
-    FooterComponent
-  ],
+    FooterComponent,
+    HeaderComponent
+],
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.scss']
 })
