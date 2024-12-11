@@ -5,35 +5,44 @@ font-face {
 }
 
 main {
-  width: 100vw;
-  height: 70vh;
+  width: 100%;
+  height: 70%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  margin-left: 50px;
 }
 
 .header {
-  margin-top: 90px;
   font-family: "Quantico", sans-serif;
   font-size: 65px;
   color: transparent;
   transform: rotate(-90deg);
   -webkit-text-stroke: 1px #b5e93b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+.whyMeHeader {
+  width: 10%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .whyMeText {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
+  gap: 50px;
 }
 
 .whyMePTag {
-  width: 65vw;
+  width: 100%;
   font-size: 18px;
   line-height: 30px;
   text-wrap: wrap;
@@ -51,7 +60,6 @@ main {
 }
 .factDiv {
   width: 100%;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -74,6 +82,7 @@ main {
 }
 
 .arrowDiv {
+  width: 10%;
   display: flex;
   justify-content: center;
   align-items: end;

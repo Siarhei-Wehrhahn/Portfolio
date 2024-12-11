@@ -6,8 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    background-repeat: no-repeat; /* Keine Wiederholung des Hintergrunds */
+    height: 100%;
+    width: 100vw;
+    background-repeat: no-repeat;
 }

@@ -6,13 +6,14 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+  styleUrls: ['./references.component.scss', './references-media.component.scss'],
 })
 export class ReferencesComponent implements AfterViewInit {
   @ViewChild('references') referencesContainer!: ElementRef;
 
   ngAfterViewInit() {
-    // Stelle sicher, dass das Element existiert
+    const container = this.referencesContainer.nativeElement;
+    container.scrollLeft = container.scrollWidth * (this.currentReferenceIndex / this.references.length);
     if (this.referencesContainer) {
       this.referencesContainer.nativeElement.scrollLeft = 0; // Scroll auf den ersten Punkt
     }
