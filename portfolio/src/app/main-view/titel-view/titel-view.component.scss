@@ -1,5 +1,5 @@
 main {
-    width: 100vw;
+    width: 84vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ main {
         color: transparent;
         -webkit-text-stroke: 1px #B5E93B;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        margin-bottom: 25%;
+        margin-bottom: 20%;
     }
 
 }
@@ -87,6 +87,14 @@ svg {
 .city {
     display: none;
 }
+
+@media (max-width: 1165px) {
+    .profileImg {
+        >h2 {
+            margin-bottom: 2%;
+        }
+    }
+  }
 
 @media (max-width: 1024px) {
     section {

@@ -17,15 +17,19 @@
 }
 
 section {
-  width: 90vw;
+  width: 100vw;
   position: relative;
+}
+
+.widthLimiter {
+  max-width: 1450px;
 }
 
 #titelView {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95vw;
+  width: calc(100vw - 220px);
   height: 100%;
   margin: 0 auto; 
   box-sizing: border-box;
@@ -36,9 +40,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  max-width: 1600px;
   width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -66,15 +68,6 @@ section {
 
 .footer {
   display: none;
-}
-
-@media(max-width: 1250px) {
-  #titelView {
-    width: 97vw;
-  }
-  section {
-    width: 100vw;
-  }
 }
 
 @media (max-width: 1024px) {
