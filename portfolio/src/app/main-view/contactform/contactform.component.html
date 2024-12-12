@@ -8,9 +8,10 @@
       id="name"
       name="name"
       placeholder="Your name"
+      [ngClass]="{'invalid': !contactForm.form.controls['name']?.valid && contactForm.form.controls['name']?.touched, 'valid': contactForm.form.controls['name']?.valid}"
       required
     />
-
+  
     <input
       class="inputField"
       [(ngModel)]="contactData.email"
@@ -18,10 +19,11 @@
       id="email"
       name="email"
       placeholder="Your email"
+      [ngClass]="{'invalid': !contactForm.form.controls['email']?.valid && contactForm.form.controls['email']?.touched, 'valid': contactForm.form.controls['email']?.valid}"
       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
       required
     />
-
+  
     <textarea
       class="inputField textArea"
       #message="ngModel"
@@ -30,28 +32,36 @@
       name="message"
       id="message"
       placeholder="Write Something"
+      [ngClass]="{'invalid': message.invalid && message.touched, 'valid': message.valid}"
       required
     ></textarea>
-
-    <div class="checkbox-container">
-      <input
-        type="checkbox"
-        id="terms"
-        name="terms"
-        [(ngModel)]="contactData.terms"
-      />
-      <label class="term" for="terms"
-        >I've read the <a href="#">privacy policy</a> and agree to the
-        processing of my data as outlined</label
-      >
+  
+    <div *ngIf="message.invalid && message.touched">
+      <span>Please enter a message</span>
     </div>
-
-    @if(!message.valid && message.touched) {
-    <span>Please enter a message</span>
-    }
-
+  
+    <div class="checkbox-container">
+      <img
+        class="terms"
+        [src]="checkboxSrc"
+        (click)="toggleCheckbox()"
+        (mouseenter)="onHover(true)"
+        (mouseleave)="onHover(false)"
+        alt="checkbox"
+      />
+      <div class="acceptionFailed">
+        <label class="term" for="terms">
+          I've read the <a [routerLink]="['/privacy-policy']">privacy policy</a> and agree to the
+          processing of my data as outlined
+        </label>
+        <p class="failedText" style="color: #FD2E12">Please accept the privacy policy</p>
+      </div>
+    </div>
+  
     <input class="submitBtn" type="submit" value="send" />
   </form>
+  
+  
   <section>
     <h2>Let’s work together on your next project.</h2>
     <p>
@@ -73,8 +83,8 @@
       <img src="./assets/svg-icons/arrow.svg" alt="arrow_icon">
     </div>
     <div class="links">
-      <a routerLink="/legal-notice">Legal notice</a>
-      <a routerLink="/privacy-policy">Privacy policy</a>
+      <a [routerLink]="['/legal-notice']">Legal notice</a>
+      <a [routerLink]="['/privacy-policy']">Privacy policy</a>
       <p>© Siarhei Wehrhahn 2024</p>
     </div>    
   </section>

@@ -70,11 +70,22 @@
 .checkbox-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  gap: 16px;
 }
 
 a {
   color: white;
+}
+
+input:-webkit-autofill {
+  appearance: none;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #b5e93b !important;
+  -webkit-text-fill-color: #d3ed97 !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .submitBtn {
@@ -85,6 +96,40 @@ a {
   padding: 10px;
   font-size: 23px;
 }
+
+.terms {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.acceptionFailed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.failedText {
+  display: none;
+}
+
+.inputField {
+  border: 1px solid #b5e93b; /* Standard-Grenze */
+  transition: border 0.3s ease; /* Für sanfte Übergänge */
+}
+
+.inputField.invalid {
+  border: 1px solid red; /* Roter Rand für ungültige Felder */
+}
+
+.inputField.valid {
+  border: 1px solid #b5e93b; /* Grüner Rand für gültige Felder */
+}
+
 
 section {
   width: 50%;

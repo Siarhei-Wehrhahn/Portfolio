@@ -112,7 +112,7 @@ main {
   justify-content: center;
   align-items: end;
   flex-direction: row;
-  gap: 100px;
+  gap: 25 px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -124,8 +124,22 @@ main {
   height: 82vh;
 }
 
+.contactDiv {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 24px;
+}
+
 .contactBtn {
-    display: none;
+    background-color: #b5e93b;
+    color: #4A4A4A;
+    border-radius: 25px;
+    width: 150px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
