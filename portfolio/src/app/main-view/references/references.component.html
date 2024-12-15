@@ -4,7 +4,7 @@
     <h2>Need a teamplayer?</h2>
     <p>Here what my colleagues said about me</p>
   </div>
-  <div class="referenceDiv">
+  <div class="referenceDiv" #referencesContainer>
     <div *ngFor="let obj of references" class="references" #referencesContainer>
       <div class="referenceBox">
         <p>{{ obj.reference }}</p>
@@ -20,8 +20,6 @@
     <span
       *ngFor="let ref of references; let i = index"
       class="dot"
-      [class.active]="i === currentReferenceIndex"
-      (click)="scrollToReference(i)"
     ></span>
   </div>
   <div class="arrow">
