@@ -47,6 +47,12 @@
 
 .textArea {
   height: 255px;
+  padding: 8px;
+}
+
+.textArea:text {
+  height: 255px;
+  padding: 8px;
 }
 
 .textArea::placeholder {
