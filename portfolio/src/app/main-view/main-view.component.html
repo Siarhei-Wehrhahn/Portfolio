@@ -1,7 +1,7 @@
 <div id="main-view-container" class="main-view-container">
   <div class="content">
     <section style="width: 220px;">    
-      <app-header [scrollToTop]="scrollToTop.bind(this)"></app-header>
+      <app-header (overlayToggle)="toggleOverlay()" [scrollToTop]="scrollToTop.bind(this)"></app-header>
     </section>
     <section id="titelView">
       <div style="width: 100vw" class="content-container">
@@ -26,7 +26,7 @@
       <div class="content-container"><app-references></app-references></div>
     </section>
     <section id="contact" class="widthLimiter">
-      <div style="gap: 24px; padding-right: 20px" class="content-container">
+      <div class="content-container">
         <app-contactform></app-contactform>
       </div>
     </section>

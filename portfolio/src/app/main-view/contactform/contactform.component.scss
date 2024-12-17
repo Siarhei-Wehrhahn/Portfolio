@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  > h1 {
+  > .header {
     font-family: "Quantico", sans-serif;
     font-size: 54px;
     color: transparent;
@@ -124,18 +124,21 @@ input:-webkit-autofill {
 }
 
 .inputField {
-  border: 1px solid #b5e93b; /* Standard-Grenze */
-  transition: border 0.3s ease; /* Für sanfte Übergänge */
+  border: 1px solid #b5e93b;
+  transition: border 0.3s ease;
 }
 
 .inputField.invalid {
-  border: 1px solid red; /* Roter Rand für ungültige Felder */
+  border: 1px solid red;
 }
 
 .inputField.valid {
-  border: 1px solid #b5e93b; /* Grüner Rand für gültige Felder */
+  border: 1px solid #b5e93b;
 }
 
+.secondHeader {
+  display: none;
+}
 
 section {
   width: 50%;
@@ -161,9 +164,9 @@ section {
     align-items: center;
     flex-direction: row;
     margin-top: 40px;
-    >img {
-        height: 20px;
-        width: 40px;
+    > img {
+      height: 20px;
+      width: 40px;
     }
     > p {
       margin-left: 12px;
@@ -190,20 +193,66 @@ section {
     }
   }
   > .links {
-    height: 50vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
     gap: 24px;
-    >a {
-        text-decoration: none;
-        cursor: pointer;
+    > a {
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }
 
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+    >h1 {
+      width: 80%;
+      text-align: start;
+    }
+    .header {
+      display: none;
+    }
+    .secondHeader {
+      display: inline;
+      font-family: "Quantico", sans-serif;
+      font-size: 54px;
+      color: transparent;
+      -webkit-text-stroke: 1px #b5e93b;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-top: 20px;
+      white-space: nowrap;
+    }
+    >section {
+      width: 80%;
+      align-items: center;
+      text-align: start;
+      >h2 {
+        width: 100%;
+        text-align: start;
+      }
+      >p {
+        width: 100%;
+        text-align: start;
+      }
+      .backArrow {
+        display: none;
+      }
+      .links {
+        display: none;
+      }
+    }
+  }
 
-@media(max-width: 1024px) {
-  
+  section .responsiveView100 {
+    width: 100%;
+    text-align: start;
+    justify-content: start;
+  }
 }

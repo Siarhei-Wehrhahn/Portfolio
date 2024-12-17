@@ -1,17 +1,17 @@
 <main class="titelView">
   <div class="overlayMenue">
     <div class="closeOverlayDiv">
-      <img src="./assets/svg-icons/close.svg" alt="close_icon" />
+      <img (click)="toggleOverlay()" src="./assets/svg-icons/close.svg" alt="close_icon" />
     </div>
     <div class="menu">
-      <a href="#whyMe">Why me</a>
-      <a href="#skills">My Skill Set</a>
-      <a href="#projects">My Work</a>
-      <a href="#contact">Contact Me</a>
+      <a href="#whyMe" (click)="toggleOverlay()">Why me</a>
+      <a href="#skills" (click)="toggleOverlay()">My Skill Set</a>
+      <a href="#workHeader" (click)="toggleOverlay()">My Work</a>
+      <a href="#contact" (click)="toggleOverlay()">Contact Me</a>
       <div class="languageSwitchMobile">
-        <p class="pointer">DE</p>
+        <p class="pointer" (click)="toggleOverlay()">DE</p>
         <p>|</p>
-        <p class="pointer">EN</p>
+        <p class="pointer" (click)="toggleOverlay()">EN</p>
       </div>
     </div>
   </div>

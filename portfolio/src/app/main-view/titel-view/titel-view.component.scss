@@ -11,7 +11,7 @@ main {
   align-items: center;
   flex-direction: column;
 
-  main >.overlayMenue {
+  >.overlayMenue {
     display: none;
 }
 
@@ -128,15 +128,6 @@ svg {
   display: none;
 }
 
-@media (max-width: 1165px) {
-  .profileImg {
-    height: 96vh;
-    > h2 {
-      margin-bottom: 2%;
-    }
-  }
-}
-
 @media (max-width: 1024px) {
   section {
     display: flex;
@@ -146,11 +137,11 @@ svg {
 
   main {
     > .overlayMenue {
-        display: flex;
+        display: none;
         justify-content: start;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(to bottom, rgba(181, 233, 59, 0.96), rgba(84, 120, 0, 0.96));
+        background: linear-gradient(to bottom, rgba(181, 233, 59, 0.96) 32%, rgba(84, 120, 0, 0.96) 89%);
         width: 99%;
         height: 40%;
         position: fixed;
@@ -203,6 +194,7 @@ svg {
     margin-left: 0;
     width: 120%;
     flex-direction: column-reverse;
+    height: 100vh;
     > h1 {
       font-size: 40px;
     }
