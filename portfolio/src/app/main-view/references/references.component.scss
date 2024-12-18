@@ -118,12 +118,12 @@ body {
     --position: 0;
     pointer-events: none;
   }
-  
+
   div.item {
     position: absolute;
     width: 500px;
     height: 400px;
-    background-color: #0A0909;
+    background-color: #0a0909;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,28 +133,30 @@ body {
     border-radius: 30px;
     gap: 16px;
     padding-inline: 24px;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
-    transform: rotateY(calc(-30deg * (var(--position) - var(--offset))))
-      translateX(calc(-300px * (var(--position) - var(--offset))));
-    z-index: calc(5 - abs(var(--position) - var(--offset)));
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-111% * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
   }
 
   div.item:nth-of-type(1) {
     --offset: 0;
   }
-  
+
   div.item:nth-of-type(2) {
     --offset: 1;
   }
-  
+
   div.item:nth-of-type(3) {
     --offset: 2;
   }
-  
+
   div.item:nth-of-type(4) {
     --offset: 3;
   }
-  
+
   div.item:nth-of-type(5) {
     --offset: 4;
   }
@@ -162,19 +164,19 @@ body {
   div.item:nth-of-type(1) {
     z-index: calc(5 - var(--position));
   }
-  
+
   div.item:nth-of-type(2) {
     z-index: calc(5 - var(--position));
   }
-  
+
   div.item:nth-of-type(3) {
     z-index: calc(5 - var(--position));
   }
-  
+
   div.item:nth-of-type(4) {
     z-index: calc(5 - var(--position));
   }
-  
+
   div.item:nth-of-type(5) {
     z-index: calc(5 - var(--position));
   }
@@ -263,6 +265,20 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  main >.references {
+    width: 75%;
+    height: 95%;
+    >.referenceBox {
+      width: 100%;
+      overflow: auto;
+    }
+    >.person {
+      min-width: 50px;
+      text-align: start;
+    }
+  }
+}
 
 // @media (max-width: 1024px) {
 //   main {
