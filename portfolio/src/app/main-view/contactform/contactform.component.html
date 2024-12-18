@@ -112,7 +112,9 @@
       <p>Tel: 015 773 656 331</p>
     </div>
     <div class="backArrow">
-      <img src="./assets/svg-icons/arrow.svg" alt="arrow_icon" />
+      <a href="#start" (click)="scrollTo('start')">
+        <img src="./assets/svg-icons/arrow.svg" alt="arrow_icon" />
+      </a>
     </div>
     <div class="links">
       <a [routerLink]="['/legal-notice']">Legal notice</a>

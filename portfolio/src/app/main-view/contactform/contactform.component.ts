@@ -23,6 +23,14 @@ export class ContactformComponent {
     this.scrollToTopEvent.emit();
   }
 
+  scrollTo(id: string): void {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
+
   toggleCheckbox() {
     if (this.isChecked) {
       this.isChecked = false;

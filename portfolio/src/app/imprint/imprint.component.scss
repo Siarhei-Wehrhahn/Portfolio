@@ -1,0 +1,31 @@
+$background-gradient: linear-gradient(
+  to right,
+  #000000 9%,
+  #2c2b2b 22%,
+  #0b0a0a 38%,
+  #323232 63%,
+  #0b0a0a 75%
+);
+$header-footer-color: #b5e93b;
+$text-color: #ffffff;
+
+.impressum {
+  overflow-x: auto;
+  padding: 48px;
+  height: 93vh;
+  background: $background-gradient;
+  color: $text-color;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  > img {
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+    position: absolute;
+    left: 65px;
+    top: -100px;
+  }
+}

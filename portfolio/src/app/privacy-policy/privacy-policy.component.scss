@@ -13,14 +13,7 @@ main {
   overflow-x: auto;
   padding: 48px;
   height: 93vh;
-  background: linear-gradient(
-    to bottom,
-    #000000 9%,
-    #2c2b2b 22%,
-    #0b0a0a 38%,
-    #323232 63%,
-    #0b0a0a 75%
-  );
+  background: $background-gradient;
   color: $text-color;
   font-family: Arial, sans-serif;
   line-height: 1.6;

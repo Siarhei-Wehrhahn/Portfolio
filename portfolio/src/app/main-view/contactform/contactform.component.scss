@@ -13,6 +13,13 @@
   justify-content: center;
   align-items: start;
   flex-direction: row;
+  .endOfContact {
+    display: none;
+  }
+  .secondHeader {
+    display: none;
+  }
+
   > .header {
     font-family: "Quantico", sans-serif;
     font-size: 54px;
@@ -187,7 +194,7 @@ section {
     align-items: end;
     flex-direction: row;
     height: 250px;
-    > img {
+    a > img {
       transform: rotate(180deg);
     }
   }
