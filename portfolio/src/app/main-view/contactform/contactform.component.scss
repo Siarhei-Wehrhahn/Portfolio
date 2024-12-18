@@ -111,7 +111,7 @@ input:-webkit-autofill {
 }
 
 .acceptionFailed {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -166,7 +166,6 @@ section {
     margin-top: 40px;
     > img {
       height: 20px;
-      width: 40px;
     }
     > p {
       margin-left: 12px;
@@ -212,9 +211,50 @@ section {
     height: auto;
     flex-direction: column-reverse;
     align-items: center;
-    >h1 {
+    > h1 {
       width: 80%;
       text-align: start;
+    }
+    .endOfContact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      >.arrowDivMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 54px;
+        >img {
+          transform: rotate(-90deg);
+          margin-left: 158px;
+        }
+      }
+      >.links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 24px;
+        margin-bottom: 45px;
+        margin-top: 60px;
+      }
+    }
+    > form {
+      margin-top: 24px;
+      width: 90%;
+      align-items: end;
+      >input,
+      >textArea {
+        width: 98%;
+      }
+      >#sendBtn {
+        width: 35%;
+        border-radius: 50px;
+      }
+      .checkbox-container {
+        width: 100%;
+      }
     }
     .header {
       display: none;
@@ -229,15 +269,15 @@ section {
       margin-top: 20px;
       white-space: nowrap;
     }
-    >section {
-      width: 80%;
+    > section {
+      width: 90%;
       align-items: center;
       text-align: start;
-      >h2 {
+      > h2 {
         width: 100%;
         text-align: start;
       }
-      >p {
+      > p {
         width: 100%;
         text-align: start;
       }
@@ -254,5 +294,21 @@ section {
     width: 100%;
     text-align: start;
     justify-content: start;
+    margin-top: 24px;
+  }
+}
+
+.container > .secondHeader {
+  font-size: 47px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    > form {
+      >input,
+      >textArea {
+        width: 94%;
+      }
+    }
   }
 }

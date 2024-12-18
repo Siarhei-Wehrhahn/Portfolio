@@ -28,26 +28,32 @@ main {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  > img {
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+    position: absolute;
+    left: 65px;
+    top: -100px;
+  }
 }
 
 main::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  
-  main::-webkit-scrollbar-thumb {
-    background-color: #4a4a4a;
-    border-radius: 5px;
-  }
-  
-  main::-webkit-scrollbar-thumb:hover {
-    background-color: #6a6a6a;
-  }
-  
-  main::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
+  width: 10px;
+  height: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 5px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: #6a6a6a;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 h1,
 h2,

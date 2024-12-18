@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -17,6 +17,11 @@ export class ContactformComponent {
   isHovered = false;
   isFailed = false;
   checkboxSrc = './assets/svg-icons/checkbox.svg';
+  @Output() scrollToTopEvent = new EventEmitter<void>();
+
+  triggerScrollToTop(): void {
+    this.scrollToTopEvent.emit();
+  }
 
   toggleCheckbox() {
     if (this.isChecked) {

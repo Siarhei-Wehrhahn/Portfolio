@@ -123,3 +123,11 @@ main {
     }
   }
 }
+
+@media (max-width: 450px) {
+  main 
+  >.headerDiv 
+  >h1 {
+    font-size: 47px;
+  }
+}

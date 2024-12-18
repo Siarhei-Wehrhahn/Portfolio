@@ -238,3 +238,11 @@ main {
         }
     }
 }
+
+@media (max-width: 450px) {
+  main 
+  >.whyMeHeader 
+  >.header {
+    font-size: 47px;
+  }
+}

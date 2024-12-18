@@ -8,6 +8,7 @@ interface Project {
   about: string;
   technologies: string;
   githubLink: string;
+  liveTest: string,
   learned: string;
   showMore: boolean;
 }
@@ -60,11 +61,11 @@ onScroll(event: WheelEvent): void {
   aboutGrowBro = 'GrowBro is an app connected to the ChatGPT API, specifically trained to answer all questions about cannabis cultivation. With the decriminalization of cannabis on April 1, 2024, I saw an opportunity to create an AI assistant tailored for beginners. The app is straightforward: users can register either via email or anonymously and are immediately directed to the main screen, where all interactions take place. Here, users can ask questions, and before responding, the AI evaluates whether its answer would be helpful or potentially harmful to the plant. Based on this assessment, it provides two possible answers, along with the pros and cons of each option, ensuring users get comprehensive and detailed guidance without needing to ask follow-up questions frequently.'
   learnedGrowBro = 'I learned how to work with the ChatGPT API and understood the importance of developing software that aligns with current events. This approach can drive significant user interest, resulting in many downloads and even some sales. Additionally, the project taught me how to create value by combining relevant content with user-friendly technology, leading to a successful app launch.'
   myProjects: Project[] = [
-    {number: 1, projectName: 'Join', img: "./assets/img/join.png", about: this.aboutJoin, technologies: 'HTML, CSS, JavaScript, Firebase', githubLink: 'https://github.com/Siarhei-Wehrhahn/JOIN', learned: this.learnedJoin, showMore: true},
-    {number: 2, projectName: 'Pollo Loco', img: "./assets/img/pollo_loco.png", about: this.aboutPolloLoco, technologies: 'HTML, CSS, JavaScript', githubLink: 'https://github.com/Siarhei-Wehrhahn/El_Polo_Loco', learned: this.learnedPolloLoco, showMore: false},
-    {number: 3, projectName: 'Clever Kiddo', img: "./assets/img/clever_kiddo.png", about: this.aboutCleverKiddo, technologies: 'SwiftUi, Firebase, MVVM, Combine, SwiftUI State Management', githubLink: 'https://github.com/Siarhei-Wehrhahn/Clever-Kiddo-', learned: this.learnedCleverKiddo, showMore: false},
-    {number: 4, projectName: 'JRadio', img: "./assets/img/j_radio.png", about: this.aboutJRadio, technologies: 'SwiftUi', githubLink: 'https://github.com/Siarhei-Wehrhahn/Jay-s_Webradio', learned: this.learnedJRadio, showMore: false},
-    {number: 5, projectName: 'GrowBro', img: "./assets/img/grow_bro.png", about: this.aboutGrowBro, technologies: 'SwiftUi, ChatGPT API, Firebase, MVVM, CoreData', githubLink: 'https://github.com/Siarhei-Wehrhahn/GrowBro', learned: this.learnedGrowBro, showMore: false}
+    {number: 1, projectName: 'Join', img: "./assets/img/join.png", about: this.aboutJoin, technologies: 'HTML, CSS, JavaScript, Firebase', githubLink: 'https://github.com/Siarhei-Wehrhahn/JOIN', liveTest: "", learned: this.learnedJoin, showMore: true},
+    {number: 2, projectName: 'Pollo Loco', img: "./assets/img/pollo_loco.png", about: this.aboutPolloLoco, technologies: 'HTML, CSS, JavaScript', githubLink: 'https://github.com/Siarhei-Wehrhahn/El_Polo_Loco', liveTest: "", learned: this.learnedPolloLoco, showMore: false},
+    {number: 3, projectName: 'Clever Kiddo', img: "./assets/img/clever_kiddo.png", about: this.aboutCleverKiddo, technologies: 'SwiftUi, Firebase, MVVM, Combine, SwiftUI State Management', githubLink: 'https://github.com/Siarhei-Wehrhahn/Clever-Kiddo-', liveTest: "https://apps.apple.com/pk/app/clever-kiddo/id6498900984", learned: this.learnedCleverKiddo, showMore: false},
+    {number: 4, projectName: 'JRadio', img: "./assets/img/j_radio.png", about: this.aboutJRadio, technologies: 'SwiftUi', githubLink: 'https://github.com/Siarhei-Wehrhahn/Jay-s_Webradio', liveTest: "https://apps.apple.com/pk/app/jradio/id6479694888", learned: this.learnedJRadio, showMore: false},
+    {number: 5, projectName: 'GrowBro', img: "./assets/img/grow_bro.png", about: this.aboutGrowBro, technologies: 'SwiftUi, ChatGPT API, Firebase, MVVM, CoreData', githubLink: 'https://github.com/Siarhei-Wehrhahn/GrowBro', liveTest: "https://apps.apple.com/pk/app/growbro/id6547867443", learned: this.learnedGrowBro, showMore: false}
   ]
 
   showMore(project: Project) {
