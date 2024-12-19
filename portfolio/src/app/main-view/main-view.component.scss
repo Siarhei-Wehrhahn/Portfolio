@@ -1,5 +1,6 @@
 .main-view-container {
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: auto;
   display: flex;
   width: 100vw;
@@ -7,24 +8,12 @@
   scrollbar-width: none;
 }
 
-.full-height {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-* {
-  outline: 1px solid red;
-}
-
 .main-view-container::-webkit-scrollbar {
   display: none;
 }
 
 .ongoing {
-  width: 10%;
+  width: 30vw;
 }
 
 section {
@@ -47,7 +36,6 @@ section {
 }
 
 .content-container {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -9,10 +9,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrls: [
-    './contactform.component.scss',
-    './contactform-media.component.scss'
-  ]
+  styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
   http = inject(HttpClient)
@@ -85,14 +82,14 @@ export class ContactformComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.form.valid && this.isChecked && !this.mailTest) {
-      
+      // Formular ist gültig und die Checkbox ist aktiviert, also absenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             console.info('Formular erfolgreich gesendet', response);
-            ngForm.resetForm(); 
-            this.isChecked = false; 
-            this.updateCheckboxSrc(); 
+            ngForm.resetForm(); // Formular zurücksetzen
+            this.isChecked = false; // Checkbox zurücksetzen
+            this.updateCheckboxSrc(); // Bild zurücksetzen
           },
           error: (error) => {
             console.error(error);
@@ -103,14 +100,14 @@ export class ContactformComponent {
         });
     } else if (ngForm.form.valid && this.isChecked && this.mailTest) {
       console.info('Test-Mail versendet');
-      ngForm.resetForm(); 
-      this.isChecked = false; 
-      this.updateCheckboxSrc(); 
+      ngForm.resetForm(); // Formular zurücksetzen
+      this.isChecked = false; // Checkbox zurücksetzen
+      this.updateCheckboxSrc(); // Bild zurücksetzen
     } else {
-      
+      // Formular ist ungültig oder Checkbox nicht angeklickt
       if (!this.isChecked) {
-        this.isFailed = true; 
-        this.updateCheckboxSrc(); 
+        this.isFailed = true; // Fehlerstatus setzen
+        this.updateCheckboxSrc(); // Bild auf "failed" setzen
       }
       console.warn('Bitte die Datenschutzerklärung akzeptieren.');
     }
