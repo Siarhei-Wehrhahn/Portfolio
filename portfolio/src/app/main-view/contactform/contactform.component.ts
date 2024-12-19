@@ -9,7 +9,10 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrls: [
+    './contactform.component.scss',
+    './contactform-media.component.scss'
+  ]
 })
 export class ContactformComponent {
   http = inject(HttpClient)
@@ -71,7 +74,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://siarhei-wehrhahn.de/mx00.udag.de',
+    endPoint: 'https://siarhei-wehrhahn.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -83,14 +86,14 @@ export class ContactformComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.form.valid && this.isChecked && !this.mailTest) {
-      // Formular ist gültig und die Checkbox ist aktiviert, also absenden
+      
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             console.info('Formular erfolgreich gesendet', response);
-            ngForm.resetForm(); // Formular zurücksetzen
-            this.isChecked = false; // Checkbox zurücksetzen
-            this.updateCheckboxSrc(); // Bild zurücksetzen
+            ngForm.resetForm(); 
+            this.isChecked = false; 
+            this.updateCheckboxSrc(); 
           },
           error: (error) => {
             console.error(error);
@@ -101,14 +104,14 @@ export class ContactformComponent {
         });
     } else if (ngForm.form.valid && this.isChecked && this.mailTest) {
       console.info('Test-Mail versendet');
-      ngForm.resetForm(); // Formular zurücksetzen
-      this.isChecked = false; // Checkbox zurücksetzen
-      this.updateCheckboxSrc(); // Bild zurücksetzen
+      ngForm.resetForm(); 
+      this.isChecked = false; 
+      this.updateCheckboxSrc(); 
     } else {
-      // Formular ist ungültig oder Checkbox nicht angeklickt
+      
       if (!this.isChecked) {
-        this.isFailed = true; // Fehlerstatus setzen
-        this.updateCheckboxSrc(); // Bild auf "failed" setzen
+        this.isFailed = true; 
+        this.updateCheckboxSrc(); 
       }
       console.warn('Bitte die Datenschutzerklärung akzeptieren.');
     }
