@@ -70,11 +70,11 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://siarhei-wehrhahn.de/sendMail.php',
+    endPoint: 'siarhei-wehrhahn.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
+        'Content-Type': 'application/json',
         responseType: 'text',
       },
     },
@@ -82,14 +82,13 @@ export class ContactformComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.form.valid && this.isChecked && !this.mailTest) {
-      // Formular ist gültig und die Checkbox ist aktiviert, also absenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             console.info('Formular erfolgreich gesendet', response);
-            ngForm.resetForm(); // Formular zurücksetzen
-            this.isChecked = false; // Checkbox zurücksetzen
-            this.updateCheckboxSrc(); // Bild zurücksetzen
+            ngForm.resetForm();
+            this.isChecked = false;
+            this.updateCheckboxSrc();
           },
           error: (error) => {
             console.error(error);
