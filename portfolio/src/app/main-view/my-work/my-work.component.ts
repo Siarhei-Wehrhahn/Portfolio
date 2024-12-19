@@ -25,6 +25,7 @@ interface Project {
     './my-work-project-description.component.scss',
     './my-work-project-img.component.scss',
     './my-work-media.component.scss',
+    './my-work-media2.component.scss',
     './my-work-what-i-learned.component.scss'
   ]
 })

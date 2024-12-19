@@ -6,7 +6,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+  styleUrls: ['./references.component.scss', './references-media.component.scss'],
 })
 export class ReferencesComponent {
   references = [
