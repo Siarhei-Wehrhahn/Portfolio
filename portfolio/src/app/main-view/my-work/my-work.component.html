@@ -1,5 +1,5 @@
 <main>
-  <div class="headerDiv">
+  <div class="headerDiv" id="workHeader">
     <h1>My Work</h1>
   </div>
   <div id="scrollable-container" class="scrollable">
@@ -34,16 +34,22 @@
           </div>
         </div>
         <div class="projectImg">
-          <img src="./assets/img/join.png" alt="join_project_img" />
+          <img
+            [ngClass]="{ 'margin-right-48': project.number > 2 }"
+            [ngStyle]="{
+              height: project.number > 2 ? '90%' : ''
+            }"
+            src="{{ project.img }}"
+            alt="project_img"
+          />
           <div class="link">
             <a
               class="github"
               href="{{ project.githubLink }}"
               target="_blank"
-              rel="noopener noreferrer"
               >GitHub</a
             >
-            <a class="test" href="">Live Test</a>
+            <a class="test" href="{{ project.liveTest }}" target="_blank">Live Test</a>
           </div>
         </div>
       </div>

@@ -1,0 +1,107 @@
+@media (max-width: 1024px) {
+    .container {
+      width: 100%;
+      height: auto;
+      flex-direction: column-reverse;
+      align-items: center;
+      > h1 {
+        width: 80%;
+        text-align: start;
+      }
+      .endOfContact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >.arrowDivMobile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 54px;
+          >img {
+            transform: rotate(-90deg);
+            margin-left: 158px;
+          }
+        }
+        >.links {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          gap: 24px;
+          margin-bottom: 45px;
+          margin-top: 60px;
+        }
+      }
+      > form {
+        margin-top: 24px;
+        width: 90%;
+        align-items: end;
+        >input,
+        >textArea {
+          width: 98%;
+        }
+        >#sendBtn {
+          width: 35%;
+          border-radius: 50px;
+        }
+        .checkbox-container {
+          width: 100%;
+        }
+      }
+      .header {
+        display: none;
+      }
+      .secondHeader {
+        display: inline;
+        font-family: "Quantico", sans-serif;
+        font-size: 54px;
+        color: transparent;
+        -webkit-text-stroke: 1px #b5e93b;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin-top: 20px;
+        white-space: nowrap;
+      }
+      > section {
+        width: 90%;
+        align-items: center;
+        text-align: start;
+        > h2 {
+          width: 100%;
+          text-align: start;
+        }
+        > p {
+          width: 100%;
+          text-align: start;
+        }
+        .backArrow {
+          display: none;
+        }
+        .links {
+          display: none;
+        }
+      }
+    }
+  
+    section .responsiveView100 {
+      width: 100%;
+      text-align: start;
+      justify-content: start;
+      margin-top: 24px;
+    }
+  }
+  
+  .container > .secondHeader {
+    font-size: 47px;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      > form {
+        >input,
+        >textArea {
+          width: 94%;
+        }
+      }
+    }
+  }

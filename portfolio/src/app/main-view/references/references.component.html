@@ -5,7 +5,7 @@
     <p>Here what my colleagues said about me</p>
   </div>
   <div class="referenceDiv">
-    <div *ngFor="let obj of references" class="references" #referencesContainer>
+    <div *ngFor="let obj of references" class="references">
       <div class="referenceBox">
         <p>{{ obj.reference }}</p>
       </div>
@@ -16,15 +16,27 @@
       </div>
     </div>
   </div>
-  <div class="dots">
-    <span
-      *ngFor="let ref of references; let i = index"
-      class="dot"
-      [class.active]="i === currentReferenceIndex"
-      (click)="scrollToReference(i)"
-    ></span>
-  </div>
   <div class="arrow">
-    <img src="../../../assets/svg-icons/arrow.svg" alt="arrow_icon" />
+    <a href="#contact">
+      <img src="../../../assets/svg-icons/arrow.svg" alt="arrow_icon" />
+    </a>
   </div>
 </main>
+<body>
+  <input type="radio" name="position" checked />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <main id="carousel">
+    <div *ngFor="let obj of references" class="references item">
+        <div class="referenceBox">
+          <p>{{ obj.reference }}</p>
+        </div>
+        <div class="line"></div>
+        <div class="person">
+          <h3>{{ obj.name }}</h3>
+          <p>{{ obj.project }}</p>
+        </div>
+    </div>
+  </main>
+</body>

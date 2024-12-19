@@ -13,7 +13,14 @@
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  > h1 {
+  .endOfContact {
+    display: none;
+  }
+  .secondHeader {
+    display: none;
+  }
+
+  > .header {
     font-family: "Quantico", sans-serif;
     font-size: 54px;
     color: transparent;
@@ -43,20 +50,30 @@
   opacity: 0.4;
   background-color: transparent;
   border-radius: 35px;
+  padding: 18px;
+  box-sizing: border-box;
 }
 
 .textArea {
   height: 255px;
+  padding: 18px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.textArea:text {
+  height: 255px;
+  padding: 8px;
 }
 
 .textArea::placeholder {
-  padding: 16px;
+  padding: 1px;
 }
 
 .inputField::placeholder {
   color: #d3ed97;
   font-family: "Fredoka";
-  padding-inline: 16px;
+  padding: 1px;
 }
 
 .term {
@@ -70,11 +87,22 @@
 .checkbox-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  gap: 16px;
 }
 
 a {
   color: white;
+}
+
+input:-webkit-autofill {
+  appearance: none;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #b5e93b !important;
+  -webkit-text-fill-color: #d3ed97 !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .submitBtn {
@@ -84,6 +112,44 @@ a {
   border-radius: 10px;
   padding: 10px;
   font-size: 23px;
+  cursor: pointer;
+}
+
+.terms {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.acceptionFailed {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.failedText {
+  display: none;
+}
+
+.inputField {
+  border: 1px solid #b5e93b;
+  transition: border 0.3s ease;
+}
+
+.inputField.invalid {
+  border: 1px solid red;
+}
+
+.inputField.valid {
+  border: 1px solid #b5e93b;
+}
+
+.secondHeader {
+  display: none;
 }
 
 section {
@@ -110,9 +176,8 @@ section {
     align-items: center;
     flex-direction: row;
     margin-top: 40px;
-    >img {
-        height: 20px;
-        width: 40px;
+    > img {
+      height: 20px;
     }
     > p {
       margin-left: 12px;
@@ -134,25 +199,20 @@ section {
     align-items: end;
     flex-direction: row;
     height: 250px;
-    > img {
+    a > img {
       transform: rotate(180deg);
     }
   }
   > .links {
-    height: 50vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
     gap: 24px;
-    >a {
-        text-decoration: none;
-        cursor: pointer;
+    > a {
+      text-decoration: none;
+      cursor: pointer;
     }
   }
-}
-
-
-@media(max-width: 1024px) {
-  
 }

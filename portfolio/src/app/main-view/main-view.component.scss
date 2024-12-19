@@ -27,15 +27,20 @@
   width: 10%;
 }
 
-// section {
-//   width: 90vw;
-//   position: relative;
-// }
+section {
+  width: 100vw;
+  position: relative;
+}
+
+.widthLimiter {
+  max-width: 1450px;
+}
 
 #titelView {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: calc(100vw - 220px);
   height: 100%;
   margin: 0 auto; 
   box-sizing: border-box;
@@ -47,8 +52,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  max-width: 1600px;
+  width: 100%;
   box-sizing: border-box;
+  gap: 24px; 
+  padding-right: 20px
 }
 
 .content {
@@ -77,18 +84,14 @@ section {
   display: none;
 }
 
-@media(max-width: 1250px) {
-  #titelView {
-    width: 97vw;
-  }
-  section {
-    width: 100vw;
-  }
-}
-
 @media (max-width: 1024px) {
   #titelView {
-    width: 100%; /* Korrektur für kleinere Bildschirme */
+    width: 100%;
+  }
+
+  .content-container {
+    padding: 0;
+
   }
 
   .content {

@@ -66,8 +66,8 @@ main {
 
 .middle {
   width: 90%;
-  min-height: 55%;
-  max-height: 65%;
+  min-height: 50%;
+  max-height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,16 @@ main {
       > h1 {
         transform: rotate(0deg);
         margin-bottom: 30px;
+        margin-top: 100px;
       }
     }
+  }
+}
+
+@media (max-width: 450px) {
+  main 
+  >.headerDiv 
+  >h1 {
+    font-size: 47px;
   }
 }

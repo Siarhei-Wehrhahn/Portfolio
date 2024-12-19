@@ -1,20 +1,51 @@
 <main class="titelView">
+  <div class="overlayMenue">
+    <div class="closeOverlayDiv">
+      <img (click)="toggleOverlay()" src="./assets/svg-icons/close.svg" alt="close_icon" />
+    </div>
+    <div class="menu">
+      <a href="#whyMe" (click)="toggleOverlay()">Why me</a>
+      <a href="#skills" (click)="toggleOverlay()">My Skill Set</a>
+      <a href="#workHeader" (click)="toggleOverlay()">My Work</a>
+      <a href="#contact" (click)="toggleOverlay()">Contact Me</a>
+      <div class="languageSwitchMobile">
+        <p class="pointer" (click)="toggleOverlay()">DE</p>
+        <p>|</p>
+        <p class="pointer" (click)="toggleOverlay()">EN</p>
+      </div>
+    </div>
+  </div>
   <div class="languageSwitch">
-    <img src="./assets/svg-icons/email_button.svg" alt="linkedin_icon" />
-    <img src="./assets/svg-icons/linkedInButton.svg" alt="linkedin_icon" />
-    <img src="./assets/svg-icons/githubIcon.png" alt="github_icon" />
+    <a href="mailto:sergei1997.sw@gmail.com" target="_blank">
+      <img src="./assets/svg-icons/email_button.svg" alt="linkedin_icon" />
+    </a>
+    <a href="https://www.linkedin.com/in/siarhei-wehrhahn-b31471295/" target="_blank">
+      <img src="./assets/svg-icons/linkedInButton.svg" alt="linkedin_icon" />
+    </a>
+    <a href="https://github.com/Siarhei-Wehrhahn" target="_blank">
+      <img src="./assets/svg-icons/githubIcon.png" alt="github_icon" />
+    </a>
     <p class="pointer">DE</p>
     <p>|</p>
     <p class="pointer">EN</p>
   </div>
-  <section class="profileSection">
+  <section>
     <div class="profileImg">
+      <div class="arrowDiv">
+        <a href="#whyMe">
+          <img
+            class="arrow"
+            src="./assets/svg-icons/arrow.svg"
+            alt="arrow_icon"
+          />
+        </a>
+      </div>
       <h3 class="city">Lüdenscheid</h3>
-      <h1>Siarhei Wehrhahn</h1>
-      <h2>Frontend Developer</h2>
-    </div>
-    <div class="arrowDiv">
-      <img class="arrow" src="./assets/svg-icons/arrow.svg" alt="arrow_icon" />
+      <div class="names">
+        <h1 class="name">Siarhei</h1>
+        <h1 class="sureName">Wehrhahn</h1>
+      </div>
+      <h2 class="job">Frontend Developer</h2>
     </div>
   </section>
 </main>
