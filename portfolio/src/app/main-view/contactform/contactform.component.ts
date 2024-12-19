@@ -33,7 +33,6 @@ export class ContactformComponent {
     }
   }
   
-
   toggleCheckbox() {
     if (this.isChecked) {
       this.isChecked = false;
