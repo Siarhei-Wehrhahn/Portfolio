@@ -30,7 +30,6 @@ export class ContactformComponent {
     }
   }
   
-
   toggleCheckbox() {
     if (this.isChecked) {
       this.isChecked = false;
@@ -71,7 +70,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://siarhei-wehrhahn.de/mx00.udag.de',
+    endPoint: 'https://siarhei-wehrhahn.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
