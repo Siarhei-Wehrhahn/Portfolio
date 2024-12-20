@@ -70,7 +70,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'siarhei-wehrhahn.de/sendMail.php',
+    endPoint: 'sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
