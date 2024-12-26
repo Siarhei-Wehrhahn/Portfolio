@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
@@ -18,6 +19,8 @@ export class ContactformComponent {
   isFailed = false;
   checkboxSrc = './assets/svg-icons/checkbox.svg';
   @Output() scrollToTopEvent = new EventEmitter<void>();
+
+  constructor(private translate: TranslateService) {}
 
   triggerScrollToTop(): void {
     this.scrollToTopEvent.emit();

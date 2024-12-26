@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-titel-view',
@@ -8,7 +9,10 @@ import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrl: './titel-view.component.scss'
 })
 export class TitelViewComponent implements AfterViewInit {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2, private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
+
   isOverlayVisible = false;
 
   ngAfterViewInit(): void {
@@ -30,5 +34,9 @@ export class TitelViewComponent implements AfterViewInit {
     } else {
       this.renderer.setStyle(overlayElement, 'display', 'none');
     }
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 }

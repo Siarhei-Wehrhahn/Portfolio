@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Project {
   number: number;
@@ -30,6 +31,8 @@ interface Project {
 })
 export class MyWorkComponent implements AfterViewInit {
   private scrollableContainer!: HTMLElement;
+
+  constructor(private translate: TranslateService) {}
 
   ngAfterViewInit(): void {
     this.scrollableContainer = document.getElementById('scrollable-container') as HTMLElement;

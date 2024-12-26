@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,5 +10,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
+  constructor(private translate: TranslateService) {}
 }

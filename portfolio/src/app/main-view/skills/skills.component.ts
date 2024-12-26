@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
@@ -9,6 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(private translate: TranslateService) {}
+
   skillIcon = [
     { icon: '../../assets/svg-icons/angular.svg', name: 'Angular' },
     { icon: '../../assets/svg-icons/typeScript.svg', name: 'TypeScript' },

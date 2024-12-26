@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class HeaderComponent {
   @Input() scrollToTop!: () => void; 
   @Output() overlayToggle = new EventEmitter<void>();
+
+  constructor(private translate: TranslateService) {}
 
   onBurgerClick(): void {
     this.overlayToggle.emit(); // Event auslösen

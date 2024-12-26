@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-why-me',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './why-me.component.scss'
 })
 export class WhyMeComponent {
-
+  constructor(private translate: TranslateService) {}
 }
