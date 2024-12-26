@@ -9,9 +9,9 @@
       <a href="#workHeader" (click)="toggleOverlay()">My Work</a>
       <a href="#contact" (click)="toggleOverlay()">Contact Me</a>
       <div class="languageSwitchMobile">
-        <p class="pointer" (click)="toggleOverlay()">DE</p>
+        <p class="pointer" (click)="switchLanguage('de')">DE</p>
         <p>|</p>
-        <p class="pointer" (click)="toggleOverlay()">EN</p>
+        <p class="pointer" (click)="switchLanguage('en')">EN</p>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
       </div>
       <h3 class="city">Lüdenscheid</h3>
       <div class="names">
-        <h1 class="name">Siarhei</h1>
+        <h1 class="name">{{ "NAME" | transla }}</h1>
         <h1 class="sureName">Wehrhahn</h1>
       </div>
       <h2 class="job">Frontend Developer</h2>
