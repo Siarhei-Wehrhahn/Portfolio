@@ -1,16 +1,23 @@
-import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Renderer2 } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-titel-view',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './titel-view.component.html',
   styleUrl: './titel-view.component.scss'
 })
+
 export class TitelViewComponent implements AfterViewInit {
-  constructor(private el: ElementRef, private renderer: Renderer2, private translate: TranslateService) {
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private translate: TranslateService,
+    private cdr: ChangeDetectorRef// Inject ChangeDetectorRef
+  ) {
     this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   isOverlayVisible = false;
@@ -37,6 +44,8 @@ export class TitelViewComponent implements AfterViewInit {
   }
 
   switchLanguage(language: string) {
+    console.log(`Switching language to: ${language}`); // Add this line
     this.translate.use(language);
+    this.cdr.detectChanges();
   }
 }

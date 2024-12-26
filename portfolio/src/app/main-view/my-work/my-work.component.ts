@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface Project {
   number: number;
@@ -17,7 +17,7 @@ interface Project {
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrls: [
     './my-work-header.component.scss',

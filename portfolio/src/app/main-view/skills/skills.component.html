@@ -2,16 +2,11 @@
   <div class="empty"></div>
   <div class="down">
     <div class="header">
-      <h1>My Skill Set</h1>
+      <h1>{{ "MYSKILLSET" | translate }}</h1>
     </div>
     <div class="skills">
       <p>
-        The IT world is constantly changing, and I really enjoy expanding my
-        knowledge. I'm especially interested in new technologies and tools
-        because I love working on my skills and always learning something new.
-        For me, it's important not only to keep up with trends but also to grow
-        through hands-on experience and find new solutions to the challenges
-        that come my way.
+        {{ "MYSKILLSTEXT" | translate }}
       </p>
       <div class="skillIcon">
         <div *ngFor="let skill of skillIcon" class="skill">
