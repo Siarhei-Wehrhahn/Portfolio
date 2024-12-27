@@ -106,6 +106,7 @@ main {
 
 @media (max-width: 1024px) {
   main {
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +119,7 @@ main {
     }
 
     > .down {
-      width: 80%;
+      width: 90%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -135,6 +136,7 @@ main {
           margin-left: 0;
           width: 100%;
           text-align: start;
+          white-space: normal;
         }
       }
       > .skills {
@@ -157,11 +159,20 @@ main {
   }
 }
 
+@media (max-width: 700px) {
+  main 
+  >.down 
+  >.header 
+  >h1 {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 450px) {
   main 
   >.down 
   >.header 
   >h1 {
-    font-size: 47px;
+    font-size: 30px;
   }
 }

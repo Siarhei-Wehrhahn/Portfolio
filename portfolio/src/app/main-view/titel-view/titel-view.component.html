@@ -4,10 +4,10 @@
       <img (click)="toggleOverlay()" src="./assets/svg-icons/close.svg" alt="close_icon" />
     </div>
     <div class="menu">
-      <a href="#whyMe" (click)="toggleOverlay()">Why me</a>
-      <a href="#skills" (click)="toggleOverlay()">My Skill Set</a>
-      <a href="#workHeader" (click)="toggleOverlay()">My Work</a>
-      <a href="#contact" (click)="toggleOverlay()">Contact Me</a>
+      <a href="#whyMe" (click)="toggleOverlay()">{{ "WHYME" | translate }}</a>
+      <a href="#skills" (click)="toggleOverlay()">{{ "SKILLS" | translate }}</a>
+      <a href="#workHeader" (click)="toggleOverlay()">{{ "WORK" | translate }}</a>
+      <a href="#contact" (click)="toggleOverlay()">{{ "CONTACT" | translate }}</a>
       <div class="languageSwitchMobile">
         <p class="pointer" (click)="switchLanguage('de')">DE</p>
         <p>|</p>

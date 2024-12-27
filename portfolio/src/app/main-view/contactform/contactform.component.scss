@@ -49,7 +49,8 @@
   color: #d3ed97;
   opacity: 0.4;
   background-color: transparent;
-  border-radius: 35px;box-sizing: border-box;
+  border-radius: 35px;
+  box-sizing: border-box;
 }
 
 .textArea {
@@ -224,7 +225,7 @@ section {
 @media (max-width: 1024px) {
   .container {
     width: 100%;
-    height: auto;
+    height: auto !important;
     flex-direction: column-reverse;
     align-items: center;
     > h1 {
@@ -236,17 +237,17 @@ section {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      >.arrowDivMobile {
+      > .arrowDivMobile {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 54px;
-        >img {
+        > img {
           transform: rotate(-90deg);
           margin-left: 158px;
         }
       }
-      >.links {
+      > .links {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -260,11 +261,11 @@ section {
       margin-top: 24px;
       width: 90%;
       align-items: end;
-      >input,
-      >textArea {
+      > input,
+      > textArea {
         width: 98%;
       }
-      >#sendBtn {
+      > #sendBtn {
         width: 35%;
         border-radius: 50px;
       }
@@ -276,6 +277,7 @@ section {
       display: none;
     }
     .secondHeader {
+      width: 90%;
       display: inline;
       font-family: "Quantico", sans-serif;
       font-size: 54px;
@@ -284,6 +286,7 @@ section {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       margin-top: 20px;
       white-space: nowrap;
+      text-align: start;
     }
     > section {
       width: 90%;
@@ -321,16 +324,19 @@ section {
 @media (max-width: 480px) {
   .container {
     > form {
-      >input,
-      >textArea {
+      > input,
+      > textArea {
         width: 94%;
       }
+    }
+    > .secondHeader {
+      font-size: 30px;
     }
   }
 }
 
-@media(max-height: 950px) {
+@media (max-height: 950px) {
   .container {
     height: 70vh;
-}
+  }
 }
