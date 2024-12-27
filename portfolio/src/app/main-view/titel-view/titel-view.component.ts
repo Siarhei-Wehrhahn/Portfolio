@@ -14,10 +14,10 @@ export class TitelViewComponent implements AfterViewInit {
     private el: ElementRef,
     private renderer: Renderer2,
     private translate: TranslateService,
-    private cdr: ChangeDetectorRef// Inject ChangeDetectorRef
+    private cdr: ChangeDetectorRef
   ) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
   }
 
   isOverlayVisible = false;
@@ -44,7 +44,7 @@ export class TitelViewComponent implements AfterViewInit {
   }
 
   switchLanguage(language: string) {
-    console.log(`Switching language to: ${language}`); // Add this line
+    console.log(`Switching language to: ${language}`);
     this.translate.use(language);
     this.cdr.detectChanges();
   }
