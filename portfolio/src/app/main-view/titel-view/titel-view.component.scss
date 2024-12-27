@@ -114,7 +114,7 @@ svg {
 }
 
 .arrowDiv {
-  height: 47vh;
+  height: 32vh;
   width: 100%;
   display: flex;
   justify-content: end;
@@ -127,6 +127,12 @@ svg {
 
 .city {
   display: none;
+}
+
+@media (max-height: 1070px) {
+  .arrowDiv {
+    height: 20vh;
+  }
 }
 
 @media (max-width: 1024px) {

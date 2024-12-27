@@ -196,6 +196,7 @@ section {
     align-items: end;
     flex-direction: row;
     height: 250px;
+    scroll-behavior: smooth;
     a > img {
       transform: rotate(180deg);
     }
@@ -326,4 +327,10 @@ section {
       }
     }
   }
+}
+
+@media(max-height: 950px) {
+  .container {
+    height: 70vh;
+}
 }
