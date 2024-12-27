@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ongoing-project',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './ongoing-project.component.html',
   styleUrl: './ongoing-project.component.scss'
 })

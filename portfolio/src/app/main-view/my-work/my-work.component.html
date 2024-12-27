@@ -1,6 +1,6 @@
 <main>
   <div class="headerDiv" id="workHeader">
-    <h1>My Work</h1>
+    <h1>{{ "WORK" | translate }}</h1>
   </div>
   <div id="scrollable-container" class="scrollable">
     <div class="container" *ngFor="let project of myProjects">
@@ -17,18 +17,18 @@
                 src="./assets/svg-icons/point.svg"
                 alt="point"
               />
-              About the project
+              {{ "ABOUT" | translate }}
             </h2>
             <p>{{ project.about }}</p>
           </div>
-          <div class="technologies">
+          <div style="white-space: nowrap" class="technologies">
             <h2>
               <img
                 class="margin-right"
                 src="./assets/svg-icons/point.svg"
                 alt="point"
               />
-              Technologies I have used
+              {{ "TECHNOLOGIES" | translate }}
             </h2>
             <p>{{ project.technologies }}</p>
           </div>
@@ -43,13 +43,12 @@
             alt="project_img"
           />
           <div class="link">
-            <a
-              class="github"
-              href="{{ project.githubLink }}"
-              target="_blank"
+            <a class="github" href="{{ project.githubLink }}" target="_blank"
               >GitHub</a
             >
-            <a class="test" href="{{ project.liveTest }}" target="_blank">Live Test</a>
+            <a class="test" href="{{ project.liveTest }}" target="_blank"
+              >Live Test</a
+            >
           </div>
         </div>
       </div>
@@ -60,7 +59,7 @@
             src="./assets/svg-icons/point.svg"
             alt="point"
           />
-          What I have learned
+          {{ "LEARNED" | translate }}
         </h2>
         <p>{{ project.learned }}</p>
       </div>
@@ -81,13 +80,13 @@
                 class="margin-right"
                 src="./assets/svg-icons/point.svg"
                 alt="point"
-              />About the project
+              />{{ "ABOUT" | translate }}
             </h2>
             <p>{{ project.about }}</p>
           </div>
           <div class="showMoreDiv" *ngIf="!project.showMore">
             <button class="showMoreButton" (click)="showMore(project)">
-              Show me more
+              {{ "MORE" | translate }}
             </button>
             <img
               src="./assets/svg-icons/more_arrow_down.svg"
@@ -101,17 +100,17 @@
                   class="margin-right"
                   src="./assets/svg-icons/point.svg"
                   alt="point"
-                />Technologies I have used
+                />{{ "TECHNOLOGIES" | translate }}
               </h2>
               <p>{{ project.technologies }}</p>
             </div>
             <div class="learned-section2">
-              <h2>
+              <h2 style="white-space: nowrap">
                 <img
                   class="margin-right"
                   src="./assets/svg-icons/point.svg"
                   alt="point"
-                />What I have learned
+                />{{ "LEARNED" | translate }}
               </h2>
               <p>{{ project.learned }}</p>
             </div>
@@ -132,7 +131,7 @@
       </div>
       <div class="showMoreDiv marginTop" *ngIf="project.showMore">
         <button class="showMoreButton" (click)="showMore(project)">
-          Show me less
+          {{ "LESS" | translate }}
         </button>
         <img
           class="rotate"
