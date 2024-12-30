@@ -90,7 +90,15 @@
       </div>
     </div>
 
-    <input id="sendBtn" class="submitBtn" type="submit" value="send" />
+    <input 
+    id="sendBtn" 
+    class="submitBtn" 
+    [class.valid]="!message.invalid" 
+    [class.invalid]="message.invalid" 
+    type="submit" 
+    value="send" 
+  />
+  
   </form>
 
   <section>
@@ -115,5 +123,5 @@
       <p>© Siarhei Wehrhahn 2024</p>
     </div>
   </section>
-  <h1 class="secondHeader">{{ "CONTACTME" | translate }}</h1>
+  <h1 id="contactHeader" class="secondHeader">{{ "CONTACTME" | translate }}</h1>
 </div>

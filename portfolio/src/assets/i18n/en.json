@@ -58,5 +58,13 @@
   "LETSWORKTEXT": "Whether you need to develop a new web application, optimize existing systems, or create tailored mobile apps for iOS and Android – as a certified Web Developer and IHK-certified Mobile Developer, I bring the technical expertise and problem-solving skills needed to turn your vision into success.",
   "LEGALNOTICE": "Legal Notice",
   "PRIVACYPOLICY": "Privacy Policy",
-  "IMPRINT": "Imprint"
+  "IMPRINT": "Imprint",
+  "PRIVACY_POLICY": "Privacy Policy",
+  "IMPRINT_DESCRIPTION": "Information according to § 5 TMG",
+  "CONTACT_PERSON": "Represented by:",
+  "CONTACT_INFO": "Contact:",
+  "PHONE": "Phone:",
+  "DISCLAIMER": "Disclaimer",
+  "DISCLAIMER_CONTENT": "The content of our pages was created with the greatest care. However, we cannot guarantee the accuracy, completeness, and timeliness of the content. As a service provider, we are responsible for our own content on these pages under the general laws, according to § 7 para. 1 TMG.",
+  "PRIVACY_CONTENT": "The use of our website is generally possible without providing personal data. As far as personal data (such as name, address, or email addresses) is collected on our pages, it is always done on a voluntary basis, if possible. This data will not be passed on to third parties without your explicit consent."
 }

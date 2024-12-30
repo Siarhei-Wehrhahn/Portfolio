@@ -111,6 +111,17 @@ input:-webkit-autofill {
   border-radius: 10px;
   padding: 10px;
   font-size: 23px;
+  cursor: pointer;
+}
+
+.submitBtn.valid {
+  background-color: #b5e93b;
+  color: white;
+  width: 220px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 23px;
+  cursor: pointer;
 }
 
 .terms {

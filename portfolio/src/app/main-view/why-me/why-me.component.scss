@@ -186,6 +186,10 @@ main {
     text-align: center;
 }
 
+.contactBtn:hover {
+  background: linear-gradient(to bottom, #b5e93b, #749e12);
+}
+
 @media (max-height: 1000px) {
   .arrowDiv {
     height: 90vh;

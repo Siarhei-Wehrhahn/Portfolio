@@ -13,6 +13,7 @@ main {
   overflow-x: auto;
   padding: 48px;
   height: 93vh;
+  width: calc(100% - 250px);
   background: $background-gradient;
   color: $text-color;
   font-family: Arial, sans-serif;
@@ -25,9 +26,39 @@ main {
     transform: rotate(180deg);
     margin-bottom: 20px;
     position: absolute;
-    left: 65px;
+    left: 115px;
     top: -100px;
   }
+}
+
+.logo {
+  width: 100px;
+}
+
+.fullScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 100vh;
+  background-color: #b5e93b;
+}
+
+.footer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100vh;
+  background-color: #b5e93b;
 }
 
 main::-webkit-scrollbar {

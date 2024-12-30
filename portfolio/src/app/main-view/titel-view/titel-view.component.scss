@@ -1,8 +1,8 @@
 font-face {
-    font-family: "Quantico";
-    src: url("../../../assets/fonts/Quantico/Quantico-Regular.ttf")
-      format("trueType");
-  }
+  font-family: "Quantico";
+  src: url("../../../assets/fonts/Quantico/Quantico-Regular.ttf")
+    format("trueType");
+}
 
 main {
   width: 100vw;
@@ -11,13 +11,14 @@ main {
   align-items: center;
   flex-direction: column;
 
-  >.overlayMenue {
+  > .overlayMenue {
     display: none;
-}
+  }
 
   > .languageSwitch {
-    margin-top: 50px;
     width: 70vw;
+    position: fixed;
+    top: 30px;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -144,49 +145,54 @@ svg {
 
   main {
     > .overlayMenue {
-        display: none;
-        justify-content: start;
+      display: none;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(
+        to bottom,
+        rgba(181, 233, 59, 0.96) 32%,
+        rgba(84, 120, 0, 0.96) 89%
+      );
+      width: 99%;
+      padding-block: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      > .closeOverlayDiv {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 90%;
+        padding: 24px;
+      }
+      > .menu {
+        display: flex;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(to bottom, rgba(181, 233, 59, 0.96) 32%, rgba(84, 120, 0, 0.96) 89%);
-        width: 99%;
-        padding-block: 50px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        >.closeOverlayDiv {
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            width: 90%;
-            padding: 24px;
+        gap: 50px;
+        > a {
+          text-decoration: none;
+          color: #4a4a4a;
+          font-family: "Quantico";
+          font-size: 28px;
+          cursor: pointer;
         }
-        >.menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 50px;
-            >a {
-                text-decoration: none;
-                color: #4A4A4A;
-                font-family: "Quantico";
-                font-size: 28px;
-            }
-            >.languageSwitchMobile {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                gap: 8px ;
-                font-family: "Quantico";
-                color: #4A4A4A;
-                font-size: 28px;
-            }
+        > .languageSwitchMobile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          gap: 8px;
+          font-family: "Quantico";
+          color: #4a4a4a;
+          font-size: 28px;
         }
+      }
     }
     > .languageSwitch {
       display: none;
@@ -224,10 +230,10 @@ svg {
 }
 
 @media (max-width: 800px) {
-    .profileImg .names {
-        flex-direction: column;
-    }
+  .profileImg .names {
+    flex-direction: column;
   }
+}
 
 @media (max-width: 685px) {
   .header {
@@ -253,13 +259,13 @@ svg {
   }
 
   .profileImg {
-    >h2 {
-        font-size: 35px;
+    > h2 {
+      font-size: 35px;
     }
-    >.names {
-        >h1 {
-            font-size: 66px;
-        }
+    > .names {
+      > h1 {
+        font-size: 66px;
+      }
     }
   }
 }

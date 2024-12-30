@@ -1,4 +1,10 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Renderer2 } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  Renderer2,
+} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,9 +12,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './titel-view.component.html',
-  styleUrl: './titel-view.component.scss'
+  styleUrl: './titel-view.component.scss',
 })
-
 export class TitelViewComponent implements AfterViewInit {
   constructor(
     private el: ElementRef,
@@ -16,8 +21,8 @@ export class TitelViewComponent implements AfterViewInit {
     private translate: TranslateService,
     private cdr: ChangeDetectorRef
   ) {
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   isOverlayVisible = false;
@@ -32,6 +37,42 @@ export class TitelViewComponent implements AfterViewInit {
     setTimeout(() => this.renderer.addClass(h2Element, 'animate'), 1000);
   }
 
+  scrollTo(target: string): void {
+    const element = document.querySelector(target) as HTMLElement;
+
+    if (element) {
+      const mainViewContainer = document.getElementById('main-view-container');
+      if (!mainViewContainer) {
+        console.error('main-view-container not found');
+        return;
+      }
+
+      const isContactSection = target === '#contactHeader';
+
+      const headerOffset = isContactSection
+        ? document.querySelector('#contactHeader')?.clientHeight || 6000
+        : 0;
+
+      const elementPosition =
+        element.getBoundingClientRect().top + mainViewContainer.scrollTop;
+
+      const offsetPosition = isContactSection
+        ? elementPosition - (headerOffset + 50)
+        : elementPosition;
+
+      console.log(`Zielposition für ${target}: ${offsetPosition}`);
+
+      mainViewContainer.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    } else {
+      console.error(
+        `Element mit dem Selektor '${target}' wurde nicht gefunden.`
+      );
+    }
+  }
+
   toggleOverlay() {
     this.isOverlayVisible = !this.isOverlayVisible;
 
@@ -44,7 +85,6 @@ export class TitelViewComponent implements AfterViewInit {
   }
 
   switchLanguage(language: string) {
-    console.log(`Switching language to: ${language}`);
     this.translate.use(language);
     this.cdr.detectChanges();
   }

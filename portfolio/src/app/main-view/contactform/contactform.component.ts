@@ -84,6 +84,7 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    let btn = document.getElementById('sendBtn');
     if (ngForm.form.valid && this.isChecked && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -102,18 +103,16 @@ export class ContactformComponent {
         });
     } else if (ngForm.form.valid && this.isChecked && this.mailTest) {
       console.info('Test-Mail versendet');
-      ngForm.resetForm(); // Formular zurücksetzen
-      this.isChecked = false; // Checkbox zurücksetzen
-      this.updateCheckboxSrc(); // Bild zurücksetzen
+      ngForm.resetForm();
+      this.isChecked = false;
+      this.updateCheckboxSrc();
+      btn?.classList.add('.valid')
     } else {
-      // Formular ist ungültig oder Checkbox nicht angeklickt
       if (!this.isChecked) {
-        this.isFailed = true; // Fehlerstatus setzen
-        this.updateCheckboxSrc(); // Bild auf "failed" setzen
+        this.isFailed = true;
+        this.updateCheckboxSrc();
       }
       console.warn('Bitte die Datenschutzerklärung akzeptieren.');
     }
   }
-  
-  
 }

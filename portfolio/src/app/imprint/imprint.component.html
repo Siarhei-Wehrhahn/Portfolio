@@ -1,23 +1,29 @@
+<main>
+  <div class="header">
+    <a>
+      <img class="logo" src="./assets/img/logo.png" alt="head_logo">
+  </a>  
+  </div>
 <div class="impressum">
   <img
     [routerLink]="['']"
     src="./assets/svg-icons/arrow.svg"
     alt="back_arrow"
   />
-  <h1>Impressum</h1>
-  <p>Angaben gemäß § 5 DDG</p>
+  <h1>{{ "IMPRINT" | translate}}</h1>
+  <p>{{ "IMPRINT_DESCRIPTION" | translate}}</p>
   <p>
     Siarhei Wehrhahn <br />
     Loher str. 1<br />
     58511 Lüdenscheid <br />
   </p>
   <p>
-    <strong>Vertreten durch: </strong><br />
+    <strong>{{ "CONTACT_PERSON" | translate}} </strong><br />
     Siarhei Wehrhahn<br />
   </p>
   <p>
-    <strong>Kontakt:</strong> <br />
-    Telefon: +49157-73656331<br />
+    {{ "CONTACT_INFO" | translate }} <br />
+    {{ "PHONE" | translate}} +49157-73656331<br />
     E-Mail:
     <a href="mailto:sergei1997.sw@gmail.com">sergei1997.sw&#64;gmail.com</a>
   </p>
@@ -60,3 +66,5 @@
     >Kanzlei Hasselbach, Bonn</a
   >
 </div>
+<div class="footer"></div>
+</main>

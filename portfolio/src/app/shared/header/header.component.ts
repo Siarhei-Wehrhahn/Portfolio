@@ -15,11 +15,10 @@ export class HeaderComponent {
   constructor(private translate: TranslateService) {}
 
   onBurgerClick(): void {
-    this.overlayToggle.emit(); // Event auslösen
+    this.overlayToggle.emit();
   }
   
   onLogoClick(): void {
-    // scrollto top funktioniert noch nicht übers logo
     if (this.scrollToTop) {
       this.scrollToTop();
     }
