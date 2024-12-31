@@ -1,70 +1,47 @@
 <main>
   <div class="header">
     <a>
-      <img class="logo" src="./assets/img/logo.png" alt="head_logo">
-  </a>  
+      <img class="logo" src="./assets/img/logo.png" alt="head_logo" />
+    </a>
   </div>
-<div class="impressum">
-  <img
-    [routerLink]="['']"
-    src="./assets/svg-icons/arrow.svg"
-    alt="back_arrow"
-  />
-  <h1>{{ "IMPRINT" | translate}}</h1>
-  <p>{{ "IMPRINT_DESCRIPTION" | translate}}</p>
-  <p>
-    Siarhei Wehrhahn <br />
-    Loher str. 1<br />
-    58511 Lüdenscheid <br />
-  </p>
-  <p>
-    <strong>{{ "CONTACT_PERSON" | translate}} </strong><br />
-    Siarhei Wehrhahn<br />
-  </p>
-  <p>
-    {{ "CONTACT_INFO" | translate }} <br />
-    {{ "PHONE" | translate}} +49157-73656331<br />
-    E-Mail:
-    <a href="mailto:sergei1997.sw@gmail.com">sergei1997.sw&#64;gmail.com</a>
-  </p>
-  <p>
-    <strong>Haftungsausschluss: </strong><br /><br /><strong
-      >Haftung für Inhalte</strong
-    ><br /><br />
-    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die
-    Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch
-    keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG
-    für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-    verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch
-    nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
-    überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
-    Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
-    Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
-    unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
-    Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von
-    entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
-    entfernen.<br /><br /><strong>Datenschutz</strong><br /><br />
-    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener
-    Daten möglich. Soweit auf unseren Seiten personenbezogene Daten
-    (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt
-    dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne
-    Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br />
-    Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der
-    Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser
-    Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br />
-    Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
-    Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich
-    angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich
-    widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich
-    rechtliche Schritte im Falle der unverlangten Zusendung von
-    Werbeinformationen, etwa durch Spam-Mails, vor.<br />
-  </p>
-  <br />
-  Impressum vom
-  <a href="https://www.impressum-generator.de">Impressum Generator</a> der
-  <a href="https://www.kanzlei-hasselbach.de/standorte/bonn/" rel="nofollow"
-    >Kanzlei Hasselbach, Bonn</a
-  >
-</div>
-<div class="footer"></div>
+  <div class="impressum">
+    <img
+      [routerLink]="['']"
+      src="./assets/svg-icons/arrow.svg"
+      alt="back_arrow"
+    />
+    <h1>{{ "IMPRINT" | translate }}</h1>
+    <p>{{ "IMPRINT_DESCRIPTION" | translate }}</p>
+    <p>
+      Siarhei Wehrhahn <br />
+      Loher str. 1<br />
+      58511 Lüdenscheid <br />
+    </p>
+    <p>
+      <strong>{{ "CONTACT_PERSON" | translate }} </strong><br />
+      Siarhei Wehrhahn<br />
+    </p>
+    <p>
+      {{ "CONTACT_INFO" | translate }} <br />
+      {{ "PHONE" | translate }} +49157-73656331<br />
+      E-Mail:
+      <a href="mailto:sergei1997.sw@gmail.com">sergei1997.sw&#64;gmail.com</a>
+    </p>
+    <p>
+      <strong>{{ "DISCLAIMER" | translate }}</strong><br /><br /><strong
+        >{{ "DISCLAIMERHEADER" | translate }}</strong
+      ><br /><br />
+      {{ "DISCLAIMER_CONTENT1" | translate }}<br /><br /><strong>{{ "PRIVACYPOLICY2" | translate }}</strong><br /><br />
+      {{ "DISCLAIMER_CONTENT2" | translate }}<br />
+      {{ "DISCLAIMER_CONTENT3" | translate }}<br />
+      {{ "DISCLAIMER_CONTENT4" | translate }}<br />
+    </p>
+    <br />
+    {{ "IMPRINTFOR" | translate }}
+    <a href="https://www.impressum-generator.de">{{ "IMPRINTGENERATOR" | translate }}</a> der
+    <a href="https://www.kanzlei-hasselbach.de/standorte/bonn/" rel="nofollow"
+      >Kanzlei Hasselbach, Bonn</a
+    >
+  </div>
+  <div class="footer"></div>
 </main>

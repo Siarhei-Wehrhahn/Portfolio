@@ -21,8 +21,8 @@ export class TitelViewComponent implements AfterViewInit {
     private translate: TranslateService,
     private cdr: ChangeDetectorRef
   ) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
   }
 
   isOverlayVisible = false;
