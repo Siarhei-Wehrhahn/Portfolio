@@ -227,6 +227,28 @@ section {
   }
 }
 
+
+// benachrichtigung fertig machen funktionen sind noch nicht da 
+.messageBox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  >.messageText {
+    font-weight: bold;
+  }
+
+  >button {
+    background-color: #b5e93b;
+    color: white;
+    border-radius: 15px;
+    padding: 8px;
+    padding-inline: 16px;
+    border: 1px solid white;
+  }
+}
+
 @media (hover: none) {
   .checkbox:hover {
     background-color: inherit;
