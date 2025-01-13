@@ -227,27 +227,28 @@ section {
   }
 }
 
-
-// benachrichtigung fertig machen funktionen sind noch nicht da 
 .messageBox {
+  width: 500px;
+  height: 100px;
   display: none;
+  position: fixed;
+  opacity: 1;
+  background-color: #424242bb;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  gap: 16px;
-
-  >.messageText {
-    font-weight: bold;
-  }
-
-  >button {
-    background-color: #b5e93b;
-    color: white;
-    border-radius: 15px;
-    padding: 8px;
-    padding-inline: 16px;
-    border: 1px solid white;
-  }
+  gap: 70px;
+  padding: 15px;
+  padding-inline: 45px;
+  border-radius: 25px;
 }
+
+.messageBox .messageText p {
+  text-align: center;
+}
+
 
 @media (hover: none) {
   .checkbox:hover {

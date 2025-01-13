@@ -96,19 +96,16 @@
     [class.valid]="!message.invalid" 
     [class.invalid]="message.invalid" 
     type="submit" 
-    value="send" 
+    value="send"
   />
   
   </form>
 
-  <section class="messageBox">
-    <div class="messagetext">
-      <p>Hey, danke für ihr Nachricht. Ihre Email wird so schnell wie möglich bearbeitet und beantwortet.</p>
+  <section class="messageBox" #messageBoxId>
+    <div class="messageText">
+      <p>Hey, danke für Ihre Nachricht. Ihre Email wird so schnell wie möglich bearbeitet und beantwortet.</p>
     </div>
-    <button>
-      <p class="btn">OK</p>
-    </button>
-  </section>
+  </section>  
 
   <section>
     <h2>{{ "LETSWORK" | translate }}</h2>

@@ -21,8 +21,8 @@ export class TitelViewComponent implements AfterViewInit {
     private translate: TranslateService,
     private cdr: ChangeDetectorRef
   ) {
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   isOverlayVisible = false;
@@ -57,19 +57,13 @@ export class TitelViewComponent implements AfterViewInit {
         element.getBoundingClientRect().top + mainViewContainer.scrollTop;
 
       const offsetPosition = isContactSection
-        ? elementPosition - (headerOffset + 50)
+        ? elementPosition - (headerOffset + 80)
         : elementPosition;
-
-      console.log(`Zielposition für ${target}: ${offsetPosition}`);
 
       mainViewContainer.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       });
-    } else {
-      console.error(
-        `Element mit dem Selektor '${target}' wurde nicht gefunden.`
-      );
     }
   }
 

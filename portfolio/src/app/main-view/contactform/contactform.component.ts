@@ -4,6 +4,7 @@ import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contactform',
@@ -19,9 +20,30 @@ export class ContactformComponent {
   isFailed = false;
   checkboxSrc = './assets/svg-icons/checkbox.svg';
   @Output() scrollToTopEvent = new EventEmitter<void>();
+  @ViewChild('messageBoxId') sendAlertBox!: ElementRef<HTMLDivElement>;
 
   constructor(private translate: TranslateService) {}
 
+  toggleSendMessage() {
+    const alertBox = this.sendAlertBox.nativeElement;
+    alertBox.style.display = 'flex';
+    alertBox.style.opacity = '1';
+  
+    let opacity = 1;
+  
+    setTimeout(() => {
+      const interval = setInterval(() => {
+        opacity -= 0.01;
+        if (opacity <= 0) {
+          opacity = 0;
+          clearInterval(interval);
+          alertBox.style.display = 'none';
+        }
+        alertBox.style.opacity = opacity.toString();
+      }, 1000 / 25);
+    }, 3000);
+  }  
+  
   triggerScrollToTop(): void {
     this.scrollToTopEvent.emit();
   }
@@ -88,8 +110,7 @@ export class ContactformComponent {
     if (ngForm.form.valid && this.isChecked && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
-            console.info('Formular erfolgreich gesendet', response);
+          next: () => {
             ngForm.resetForm();
             this.isChecked = false;
             this.updateCheckboxSrc();
@@ -98,7 +119,7 @@ export class ContactformComponent {
             console.error(error);
           },
           complete: () => {
-            console.info('Senden abgeschlossen');
+            this.toggleSendMessage();
           },
         });
     } else if (ngForm.form.valid && this.isChecked && this.mailTest) {
